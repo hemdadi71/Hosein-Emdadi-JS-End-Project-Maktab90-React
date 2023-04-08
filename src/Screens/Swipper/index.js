@@ -3,11 +3,11 @@ import El from '@/Library'
 export const Swipper = () => {
   return El({
     element: 'div',
-    className: 'swiper-wrapper',
+    className: 'swiper-wrapper h-full',
     child: [
       El({
         element: 'div',
-        className: 'swiper-slide text-5xl',
+        className: 'swiper-slide h-full',
         id: 'firstSlide',
         child: [
           El({
@@ -16,12 +16,12 @@ export const Swipper = () => {
           }),
           El({
             element: 'div',
-            className: 'p-6 flex flex-col gap-20',
+            className: 'px-[24px] pt-[10px] md:pt-[32px]',
             child: [
               El({
                 element: 'p',
                 className:
-                  'text-[32px] font-semibold text-center leading-[2.7rem]',
+                  'md:text-[32px] text-[20px] font-semibold text-center',
                 child: 'We provide high quality products just for you',
               }),
             ],
@@ -30,7 +30,7 @@ export const Swipper = () => {
       }),
       El({
         element: 'div',
-        className: 'swiper-slide text-5xl',
+        className: 'swiper-slide h-full',
         id: 'secondSlide',
         child: [
           El({
@@ -39,12 +39,12 @@ export const Swipper = () => {
           }),
           El({
             element: 'div',
-            className: 'p-6 flex flex-col gap-20',
+            className: 'px-[24px] pt-[10px] md:pt-[32px]',
             child: [
               El({
                 element: 'p',
                 className:
-                  'text-[32px] font-semibold text-center leading-[2.7rem]',
+                  'md:text-[32px] text-[20px] font-semibold text-center',
                 child: 'Your satisfaction is our number one periority',
               }),
             ],
@@ -53,7 +53,7 @@ export const Swipper = () => {
       }),
       El({
         element: 'div',
-        className: 'swiper-slide text-5xl',
+        className: 'swiper-slide h-full',
         id: 'lastSlide',
         child: [
           El({
@@ -62,12 +62,11 @@ export const Swipper = () => {
           }),
           El({
             element: 'div',
-            className: 'p-6 flex flex-col gap-20',
+            className: 'px-[24px] text-[20px] pt-[10px] md:pt-[32px]',
             child: [
               El({
                 element: 'p',
-                className:
-                  'text-[32px] font-semibold text-center leading-[2.7rem]',
+                className: 'md:text-[32px] font-semibold text-center',
                 child: 'Let’s fulfill your fashion needs with shoearight now!',
               }),
             ],

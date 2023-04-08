@@ -1,14 +1,13 @@
 import El from '@/Library'
-import { handleBack, handleSubmitForm, handleValidation } from './Function'
+import { handleBack, handleShowPassword, handleSubmitForm, handleValidation } from './Function'
 
 export const Login = () => {
   return El({
     element: 'div',
-    className: 'w-full h-full bg-white text-white text-3xl',
+    className: 'w-full h-full relative bg-white text-white text-3xl',
     child: [
       El({
         element: 'div',
-        className: '',
         child: [
           El({
             element: 'img',
@@ -37,7 +36,7 @@ export const Login = () => {
             element: 'form',
             id: 'form',
             onsubmit: handleSubmitForm,
-            className: 'flex flex-col items-center gap-5 mt-[48px]',
+            className: 'flex flex-col h-full items-center gap-5 mt-[48px]',
             child: [
               El({
                 element: 'div',
@@ -81,6 +80,7 @@ export const Login = () => {
                   }),
                   El({
                     element: 'img',
+                    onclick:handleShowPassword,
                     className: 'absolute right-4 top-3',
                     src: '../../../src/Assets/img/input-suffix.png',
                   }),
@@ -120,7 +120,7 @@ export const Login = () => {
                 element: 'input',
                 type: 'submit',
                 className:
-                  'w-[380px] bg-[#212529] text-[14px] py-[6px] mt-[160px] rounded-full',
+                  'w-[380px] bg-[#212529] hover:bg-opacity-[65%] text-[14px] py-[6px] absolute bottom-[32px] rounded-full',
                 value: 'Sing In',
               }),
             ],

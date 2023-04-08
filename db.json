@@ -4,5 +4,207 @@
       "email": "hemdadi71@gmail.com",
       "password": "Hemdadi71"
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Air Force 1",
+      "brand": "Nike",
+      "price": 130,
+      "description": "The Nike Air Max 97 is a classic shoe that combines style and comfort.",
+      "image_url": "../../../public/Products/nike/1.png",
+      "size": [40, 41, 42],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 2,
+      "name": "Air Max 270",
+      "brand": "Nike",
+      "price": 170,
+      "description": "The Nike Air Max 97 is a classic shoe that combines style and comfort.",
+      "image_url": "../../../public/Products/nike/2.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 3,
+      "name": "React Infinity Run Flyknit",
+      "brand": "Nike",
+      "price": 180,
+      "description": "The Nike Air Max 97 is a classic shoe that combines style and comfort.",
+      "image_url": "../../../public/Products/nike/3.png",
+      "size": [42, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 4,
+      "name": "Blazer Mid '77 Vintage",
+      "brand": "Nike",
+      "price": 120,
+      "description": "The Nike Air Max 97 is a classic shoe that combines style and comfort.",
+      "image_url": "../../../public/Products/nike/4.png",
+      "size": [44, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 5,
+      "name": "Air Max 2090",
+      "brand": "Nike",
+      "price": 170,
+      "description": "The Nike Air Max 97 is a classic shoe that combines style and comfort.",
+      "image_url": "../../../public/Products/nike/5.png",
+      "size": [40, 41, 42, 43, 44],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 6,
+      "name": "Air Jordan 1",
+      "brand": "Nike",
+      "price": 170,
+      "description": "The Nike Air Max 97 is a classic shoe that combines style and comfort.",
+      "image_url": "../../../public/Products/nike/6.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 7,
+      "name": "Free RN Flyknit 3.0",
+      "brand": "Nike",
+      "price": 150,
+      "description": "The Nike Air Max 97 is a classic shoe that combines style and comfort.",
+      "image_url": "../../../public/Products/nike/7.png",
+      "size": [41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 8,
+      "name": "Air Max 97",
+      "brand": "Nike",
+      "price": 190,
+      "description": "The Nike Air Max 97 is a classic shoe that combines style and comfort.",
+      "image_url": "../../../public/Products/nike/8.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 9,
+      "name": "Zoom Fly 3",
+      "brand": "Nike",
+      "price": 180,
+      "description": "The Nike Air Max 97 is a classic shoe that combines style and comfort.",
+      "image_url": "../../../public/Products/nike/9.png",
+      "size": [40, 44],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 10,
+      "name": "SB Dunk Low",
+      "brand": "Nike",
+      "price": 100,
+      "description": "The Nike Air Max 97 is a classic shoe that combines style and comfort.",
+      "image_url": "../../../public/Products/nike/10.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 11,
+      "name": "RS-X",
+      "brand": "Puma",
+      "price": 140,
+      "description": " A retro-inspired lifestyle shoe with a chunky silhouette and vibrant colorways.",
+      "image_url": "../../../public/Products/puma/1.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 12,
+      "name": "Cali",
+      "brand": "Puma",
+      "price": 90,
+      "description": "A classic tennis shoe updated for modern style, with a low profile and clean design.",
+      "image_url": "../../../public/Products/puma/2.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 13,
+      "name": "NRGY Neko",
+      "brand": "Puma",
+      "price": 90,
+      "description": "A running shoe with responsive cushioning and energy return, designed for comfort and performance.",
+      "image_url": "../../../public/Products/puma/3.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 14,
+      "name": "Puma Ignite",
+      "brand": "Puma",
+      "price": 145.99,
+      "description": "A running shoe with a responsive foam midsole and breathable mesh upper, designed for long-distance runs.",
+      "image_url": "../../../public/Products/puma/4.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 15,
+      "name": "Future Rider",
+      "brand": "Puma",
+      "price": 100,
+      "description": "A soccer cleat with a customizable fit and lightweight design, designed for speed and agility on the field.",
+      "image_url": "../../../public/Products/puma/5.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 16,
+      "name": "Suede Classic",
+      "brand": "Puma",
+      "price": 80,
+      "description": "A classic lifestyle shoe with a soft suede upper and iconic Puma Formstrip, available in a range of colors.",
+      "image_url": "../../../public/Products/puma/6.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 17,
+      "name": "Clyde Court",
+      "brand": "Puma",
+      "price": 150,
+      "description": "A retro basketball shoe with a low profile and sleek design, originally worn by NBA legend Walt 'Clyde' Frazier.",
+      "image_url": "../../../public/Products/puma/7.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 18,
+      "name": "Cell Endura",
+      "brand": "Puma",
+      "price": 160,
+      "description": "A running shoe with cushioning technology designed to reduce impact and improve stability, available in a range of styles.",
+      "image_url": "../../../public/Products/puma/8.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 19,
+      "name": "Hybrid Rocket",
+      "brand": "Puma",
+      "price": 130,
+      "description": "A running shoe with a responsive cushioning system and a unique, futuristic design.",
+      "image_url": "../../../public/Products/puma/9.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    },
+    {
+      "id": 20,
+      "name": "Enzo",
+      "brand": "Puma",
+      "price": 90,
+      "description": "A versatile training shoe with a modern design and comfortable fit.",
+      "image_url": "../../../public/Products/puma/10.png",
+      "size": [40, 41, 43],
+      "color": ["green", "purple", "black", "blue", "white", "red", "black"]
+    }
   ]
 }

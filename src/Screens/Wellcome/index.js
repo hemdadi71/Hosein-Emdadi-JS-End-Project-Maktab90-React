@@ -18,7 +18,7 @@ export const wellcome = () => {
       }),
       El({
         element: 'div',
-        className: 'text-white absolute z-20 bottom-[75px] left-[32px] flex flex-col gap-12',
+        className: 'text-white w-full absolute z-20 md:bottom-[75px] bottom-[175px] md:left-[32px] pr-10 left-5 flex flex-col gap-12',
         child: [
           El({
             element: 'p',

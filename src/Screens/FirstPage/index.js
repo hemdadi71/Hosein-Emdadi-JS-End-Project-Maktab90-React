@@ -5,7 +5,7 @@ export const firstPage = () => {
   return El({
     element: 'div',
     className:
-      'flex flex-col items-center mt-[392px] w-full h-full',
+      'flex flex-col items-center md:mt-[392px] mt-[300px] w-full h-full',
     child: [
       El({
         element: 'div',
@@ -31,7 +31,7 @@ export const firstPage = () => {
       }),
       El({
         element: 'div',
-        className: 'absolute bottom-[117px]',
+        className: 'md:mt-[306px] mt-[240px]',
         child: [Loading()],
       }),
     ],

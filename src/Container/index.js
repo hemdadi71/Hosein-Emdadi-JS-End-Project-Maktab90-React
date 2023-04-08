@@ -4,7 +4,7 @@ const Container = () => {
   return El({
     element: 'main',
     id: 'main',
-    className: 'w-full h-full  md:rounded-md',
+    className: 'max-w-[428px] h-full overflow-hidden',
     child: [],
   })
 }

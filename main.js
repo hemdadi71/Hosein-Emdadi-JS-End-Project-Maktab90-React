@@ -4,8 +4,14 @@ import App from './src/App'
 import './src/styles/index.css'
 import './src/styles/style.css'
 import WindowLoad from './src/Container/Function'
+import Routing from './src/Screens/Routing/Function'
+
 const root = document.getElementById('app')
 
 root.appendChild(App())
-WindowLoad()
+if (Routing()) {
+  WindowLoad()
+} else {
+  Routing()
+}
 
