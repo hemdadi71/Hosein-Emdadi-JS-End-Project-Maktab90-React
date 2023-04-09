@@ -1,4 +1,4 @@
-import { FooterMenu } from '@/Components/FooterMenu/Function'
+
 import { FOF } from '@/Screens/FOF'
 import { firstPage } from '@/Screens/FirstPage'
 import { Login } from '@/Screens/LoginPage'
@@ -22,7 +22,6 @@ function Routing() {
     case '/home':
       main.innerHTML = ''
       main.appendChild(Products())
-      FooterMenu()
       return true
       break
     case '/login':

@@ -1,9 +1,17 @@
 import El from '@/Library'
-import { backToLogin } from './Function'
+import {
+  backToLogin,
+  handleSearch,
+  handleShowMostPopular,
+  handleShowWishList,
+} from './Function'
 import { svgs } from '@/svgs'
 import { Brands } from '@/Components/Brands'
 import { FilterItems } from '@/Components/FilterItems'
 import { FooterMenu } from '@/Components/FooterMenu'
+import { debounce } from 'lodash'
+import { Loading } from '@/Components/Loading'
+import { activeItem, filter } from '@/Components/FilterItems/Item/Function'
 
 export const Products = () => {
   return El({
@@ -12,6 +20,7 @@ export const Products = () => {
     child: [
       El({
         element: 'div',
+        id: 'homeMain',
         className: 'overflow-y-auto w-full h-full pb-[100px]',
         child: [
           El({
@@ -24,8 +33,8 @@ export const Products = () => {
                 child: [
                   El({
                     element: 'img',
-                    className: 'rounded-full ml-[24px] mt-[16px]',
-                    src: '../../../src/Assets/img/home/image-placeholder _- Change image here.png',
+                    className: 'rounded-full ml-[24px] mt-[16px] w-[48px] h-[48px]',
+                    src: '../../../src/Assets/img/photo_2023-04-09_20-18-35.jpg',
                   }),
                   El({
                     element: 'div',
@@ -56,12 +65,11 @@ export const Products = () => {
                   }),
                   El({
                     element: 'img',
-                    className: '',
                     src: '../../../src/Assets/img/home/Vector.png',
                   }),
                   El({
                     element: 'img',
-                    className: '',
+                    onclick: handleShowWishList,
                     src: '../../../src/Assets/img/home/Vector (1).png',
                   }),
                 ],
@@ -74,6 +82,7 @@ export const Products = () => {
             child: [
               El({
                 element: 'input',
+                onkeyup: debounce(e => handleSearch(e.target), 1000),
                 type: 'text',
                 className:
                   'outline-none bg-[#FAFAFA] w-full rounded-md px-2 py-[10px] text-[14px] pl-10',
@@ -102,6 +111,7 @@ export const Products = () => {
               }),
               El({
                 element: 'p',
+                onclick: handleShowMostPopular,
                 className: 'text-[#152536] text-[16px] font-bold',
                 child: 'See All',
               }),
@@ -110,11 +120,27 @@ export const Products = () => {
           El({
             element: 'div',
             className: 'ml-[24px] mt-[20px]',
-            child: [FilterItems()],
+            child: [
+              FilterItems({
+                onclick: e =>
+                  activeItem(
+                    e,
+                    filter(
+                      e,
+                      e.currentTarget.closest('#homeMain').childNodes[6],
+                      'products'
+                    )
+                  ),
+                className: 'pr-[24px]',
+              }),
+            ],
+          }),
+          Loading({
+            className: 'top-[550px]',
           }),
           El({
             element: 'div',
-            className: 'm-[24px] grid grid-cols-2 gap-x-[16px] gap-y-[23px]',
+            className: 'm-[24px] grid grid-cols-2 md:gap-x-[16px] gap-x-[35px] gap-y-[23px]',
             id: 'products',
           }),
         ],

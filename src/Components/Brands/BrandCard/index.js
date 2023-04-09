@@ -1,4 +1,5 @@
 import El from '@/Library'
+import { handleShowBrand } from '@/Screens/Products/Function'
 
 export const BrandCard = ({ text, pic }) => {
   return El({
@@ -7,6 +8,7 @@ export const BrandCard = ({ text, pic }) => {
     child: [
       El({
         element: 'div',
+        onclick: handleShowBrand,
         className:
           'w-[60px] h-[60px] bg-[#ECECEC] flex items-center justify-center rounded-full',
         child: [
@@ -19,7 +21,8 @@ export const BrandCard = ({ text, pic }) => {
       }),
       El({
         element: 'p',
-        className: 'text-[#152536] text-[14px] font-bold',
+        className:
+          'text-[#152536] text-center text-[14px] font-bold w-[70px] truncate text-overflow-ellipsis',
         child: `${text}`,
       }),
     ],

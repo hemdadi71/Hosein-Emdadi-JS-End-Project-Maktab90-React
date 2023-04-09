@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 import { GetData } from '@/API'
-import { FooterMenu } from '@/Components/FooterMenu/Function'
 import { SwipperPages } from '@/Components/Swipper'
 import swiperFunc from '@/Components/Swipper/Function'
 import { Validation } from '@/Components/Validation'
@@ -40,7 +39,7 @@ export function handleSubmitForm(e) {
       emailBox.append(
         Validation({
           text: 'Requiered',
-          className:'text-red-500',
+          className: 'text-red-500',
           id: 'emailEmpty',
         })
       )
@@ -50,7 +49,7 @@ export function handleSubmitForm(e) {
       passwordBox.append(
         Validation({
           text: 'Requiered',
-          className:'text-red-500',
+          className: 'text-red-500',
           id: 'passwordEmpty',
         })
       )
@@ -60,7 +59,7 @@ export function handleSubmitForm(e) {
       emailBox.append(
         Validation({
           text: 'Requiered',
-          className:'text-red-500',
+          className: 'text-red-500',
           id: 'emailEmpty',
         })
       )
@@ -68,7 +67,7 @@ export function handleSubmitForm(e) {
       passwordBox.append(
         Validation({
           text: 'Requiered',
-          className:'text-red-500',
+          className: 'text-red-500',
           id: 'passwordEmpty',
         })
       )
@@ -95,8 +94,8 @@ export function handleSubmitForm(e) {
           setTimeout(() => {
             main.innerHTML = ''
             main.appendChild(Products())
-            FooterMenu()
-            GetData('products').then(res => renderProduct(res.data))
+            const products = document.getElementById('products')
+            GetData('products').then(res => renderProduct(res.data, products))
             history.pushState(null, null, '/home')
             const Token = 'f;lskdfjsfdlsk;fjsklfjFds'
             if (checkbox.checked) {
@@ -104,14 +103,14 @@ export function handleSubmitForm(e) {
                 expires: 1,
               })
             }
-            Routing()
+            // Routing()
           }, 3000)
         } else {
           if (nouserValid) return
           notExist.append(
             Validation({
               text: 'There is no user with this email or password',
-              className:'text-red-500',
+              className: 'text-red-500',
               id: 'nouserValid',
             })
           )
@@ -140,7 +139,7 @@ export function handleValidation(e) {
         emailBox.append(
           Validation({
             text: 'Please Enter Valid Email',
-            className:'text-red-500',
+            className: 'text-red-500',
             id: 'invalidEmail',
           })
         )
@@ -153,7 +152,7 @@ export function handleValidation(e) {
         passwordBox.append(
           Validation({
             text: 'Please Enter Valid Password',
-            className:'text-red-500',
+            className: 'text-red-500',
             id: 'invalidPassword',
           })
         )

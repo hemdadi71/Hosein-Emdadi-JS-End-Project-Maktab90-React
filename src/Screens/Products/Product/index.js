@@ -1,9 +1,8 @@
 import El from '@/Library'
 import { handleSelectedProduct } from '../Function'
 
-export const renderProduct = data => {
-  const products = document.getElementById('products')
-  products.innerHTML = ''
+export const renderProduct = (data, element) => {
+  element.innerHTML = ''
   data.map(item => {
     const product = El({
       element: 'div',
@@ -14,7 +13,7 @@ export const renderProduct = data => {
           element: 'div',
           onclick: handleSelectedProduct,
           className:
-            'w-[182px] h-[182px] bg-[#F3F3F3] rounded-[24px] p-[20px] font-Inter',
+            'md:w-[182px] md:h-[182px] w-[155px] h-[155px] bg-[#F3F3F3] rounded-[24px] p-[20px] font-Inter',
           child: [
             El({
               element: 'img',
@@ -36,6 +35,6 @@ export const renderProduct = data => {
         }),
       ],
     })
-    products.append(product)
+    element.append(product)
   })
 }

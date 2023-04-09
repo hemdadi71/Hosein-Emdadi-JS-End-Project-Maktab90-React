@@ -1,21 +1,28 @@
 import El from '@/Library'
 
-export const Loading = () => {
+export const Loading = ({ className }) => {
   return El({
     element: 'div',
-    className: 'lds-ring',
+    id: 'loading',
+    className: `absolute left-1/2 -translate-x-1/2 hidden ${className}`,
     child: [
       El({
         element: 'div',
-      }),
-      El({
-        element: 'div',
-      }),
-      El({
-        element: 'div',
-      }),
-      El({
-        element: 'div',
+        className: 'lds-ring',
+        child: [
+          El({
+            element: 'div',
+          }),
+          El({
+            element: 'div',
+          }),
+          El({
+            element: 'div',
+          }),
+          El({
+            element: 'div',
+          }),
+        ],
       }),
     ],
   })

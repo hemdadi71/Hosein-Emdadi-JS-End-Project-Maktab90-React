@@ -32,7 +32,9 @@ export const firstPage = () => {
       El({
         element: 'div',
         className: 'md:mt-[306px] mt-[240px]',
-        child: [Loading()],
+        child: [Loading({
+          className:''
+        })],
       }),
     ],
   })

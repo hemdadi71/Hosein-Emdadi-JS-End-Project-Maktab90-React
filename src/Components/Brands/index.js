@@ -27,7 +27,7 @@ export const Brands = () => {
         pic:'image 1 (4)'
       }),
       BrandCard({
-        text: 'New Ba..',
+        text: 'New Balance',
         pic:'image 1 (5)'
       }),
       BrandCard({
@@ -35,7 +35,7 @@ export const Brands = () => {
         pic:'image 1 (6)'
       }),
       BrandCard({
-        text: 'More ..',
+        text: 'More Brands',
         pic:'image 1 (7)'
       }),
     ],

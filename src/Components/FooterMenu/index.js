@@ -1,5 +1,5 @@
 import El from '@/Library'
-import { svgs } from '@/svgs'
+import { handleActivePage } from './Function'
 
 export const FooterMenu = () => {
   return El({
@@ -14,11 +14,17 @@ export const FooterMenu = () => {
         child: [
           El({
             element: 'div',
-            className: 'flex flex-col items-center justify-center gap-[3.5px]',
+            className: 'flex flex-col items-center justify-center',
             child: [
               El({
                 element: 'div',
-                innerHTML: svgs.home,
+                onclick: handleActivePage,
+                child: [
+                  El({
+                    element: 'i',
+                    className: 'bi bi-house-door-fill text-[24px] transition-all ease-in-out duration-300',
+                  }),
+                ],
               }),
               El({
                 element: 'p',
@@ -29,11 +35,17 @@ export const FooterMenu = () => {
           }),
           El({
             element: 'div',
-            className: 'flex flex-col items-center gap-[3.5px]',
+            className: 'flex flex-col items-center',
             child: [
               El({
                 element: 'div',
-                innerHTML: svgs.cart,
+                onclick: handleActivePage,
+                child: [
+                  El({
+                    element: 'i',
+                    className: 'bi bi-bag text-[24px] transition-all ease-in-out duration-300',
+                  }),
+                ],
               }),
               El({
                 element: 'p',
@@ -44,12 +56,17 @@ export const FooterMenu = () => {
           }),
           El({
             element: 'div',
-            className: 'flex flex-col items-center gap-[3.5px]',
+            className: 'flex flex-col items-center',
             child: [
               El({
                 element: 'div',
-                innerHTML: svgs.orders,
-                className: 'mt-[2px]',
+                onclick: handleActivePage,
+                child: [
+                  El({
+                    element: 'i',
+                    className: 'bi bi-cart text-[24px] transition-all ease-in-out duration-300',
+                  }),
+                ],
               }),
               El({
                 element: 'p',
@@ -60,11 +77,17 @@ export const FooterMenu = () => {
           }),
           El({
             element: 'div',
-            className: 'flex flex-col items-center gap-[3.5px]',
+            className: 'flex flex-col items-center',
             child: [
               El({
                 element: 'div',
-                innerHTML: svgs.walet,
+                onclick: handleActivePage,
+                child: [
+                  El({
+                    element: 'i',
+                    className: 'bi bi-wallet text-[24px] transition-all ease-in-out duration-300',
+                  }),
+                ],
               }),
               El({
                 element: 'p',
@@ -75,11 +98,17 @@ export const FooterMenu = () => {
           }),
           El({
             element: 'div',
-            className: 'flex flex-col items-center gap-[3.5px]',
+            className: 'flex flex-col items-center',
             child: [
               El({
                 element: 'div',
-                innerHTML: svgs.profile,
+                onclick: handleActivePage,
+                child: [
+                  El({
+                    element: 'i',
+                    className: 'bi bi-person text-[24px] transition-all ease-in-out duration-300',
+                  }),
+                ],
               }),
               El({
                 element: 'p',

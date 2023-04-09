@@ -1,5 +1,4 @@
 import { GetData } from '@/API'
-import { FooterMenu } from '@/Components/FooterMenu/Function'
 import { SwipperPages } from '@/Components/Swipper'
 import swiperFunc from '@/Components/Swipper/Function'
 import { firstPage } from '@/Screens/FirstPage'
@@ -18,8 +17,8 @@ function WindowLoad() {
     const token = Cookies.get('token')
     if (token) {
       main.append(Products())
-      GetData('products').then(res => renderProduct(res.data))
-      FooterMenu()
+      const products = document.getElementById('products')
+      GetData('products').then(res => renderProduct(res.data, products))
       history.pushState(null, null, '/home')
       // Routing()
     } else {

@@ -1,8 +1,8 @@
-import { debounce } from 'lodash'
 import 'swiper/css/bundle'
 import App from './src/App'
 import './src/styles/index.css'
 import './src/styles/style.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 import WindowLoad from './src/Container/Function'
 import Routing from './src/Screens/Routing/Function'
 
@@ -14,4 +14,3 @@ if (Routing()) {
 } else {
   Routing()
 }
-
