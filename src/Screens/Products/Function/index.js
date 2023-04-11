@@ -8,6 +8,10 @@ import { HomePage1 } from '@/Screens/HomePage-1'
 import { Products } from '..'
 import { MostPopularPage } from '@/Screens/MostPopular'
 import { WishList } from '@/Screens/WishList'
+import { ShopingPage } from '@/Screens/Shoping'
+import { SwiperForShoping } from '@/Screens/Shoping/Function'
+import { Size } from '@/Screens/Shoping/Size'
+import { Color } from '@/Screens/Shoping/Colors'
 
 export function backToLogin() {
   const main = document.getElementById('main')
@@ -19,9 +23,18 @@ export function backToLogin() {
 }
 export function handleSelectedProduct(e) {
   const selectedId = e.currentTarget.parentElement.id
+  // const loginedAccount = JSON.parse(localStorage.getItem('login'))
+  // console.log(loginedAccount)
+  // GetData('account').then(res => {
+  //   const correntAccount = res.data.find(item => item.email === loginedAccount)
+  //   console.log(correntAccount)
+  // })
   GetData('products').then(res => {
     const selectedItem = res.data.find(item => item.id === +selectedId)
-    console.log(selectedItem)
+    ShopingPage(selectedItem)
+    Size(selectedItem.size)
+    Color(selectedItem.color)
+    SwiperForShoping()
   })
 }
 export function handleSearch(input) {
@@ -116,4 +129,3 @@ export function handleShowWishList() {
   })
   history.pushState(null, null, 'home/wishlist')
 }
-

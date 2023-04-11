@@ -95,7 +95,7 @@ body {
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -124,6 +124,50 @@ body {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* ................................................................. */
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.my-bullet-class {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #dfdfe1;
+  border-radius: 50%;
+  transition: all ease-in 300ms;
+}
+.my-bullet-active-class {
+  display: block;
+  width: 30px;
+  height: 8px;
+  background-color: #1e1d1f;
+  border-radius: 50px;
+  transition: all ease-in 300ms;
+}
+/* ...................................................................... */
+.lighGray {
+  background-color: #f3f3f3;
+}
+.green {
+  background-color: #607d8a;
+}
+.purple {
+  background-color: #9d28ac;
+}
+.brown {
+  background-color: #7a5448;
+}
+.blue {
+  background-color: #1a96f0;
+}
+.red {
+  background-color: red;
+}
+.black {
+  background-color: #000;
 }

@@ -18,7 +18,12 @@ function WindowLoad() {
     if (token) {
       main.append(Products())
       const products = document.getElementById('products')
+      const login = JSON.parse(localStorage.getItem('login'))
       GetData('products').then(res => renderProduct(res.data, products))
+      // GetData('account').then(res => {
+      //   const activeAccount = res.data.find(item => item.email === login)
+      //   console.log(activeAccount.wishList)
+      // })
       history.pushState(null, null, '/home')
       // Routing()
     } else {

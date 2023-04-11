@@ -96,8 +96,10 @@ export function handleSubmitForm(e) {
             main.appendChild(Products())
             const products = document.getElementById('products')
             GetData('products').then(res => renderProduct(res.data, products))
+            // console.log(currectItem.wishList)
             history.pushState(null, null, '/home')
-            const Token = 'f;lskdfjsfdlsk;fjsklfjFds'
+            const Token = currectItem.email
+            localStorage.setItem('login', JSON.stringify(Token))
             if (checkbox.checked) {
               Cookies.set('token', Token, {
                 expires: 1,
