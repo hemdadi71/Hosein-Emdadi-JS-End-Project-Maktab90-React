@@ -4,13 +4,173 @@
       "id": 1,
       "email": "hemdadi71@gmail.com",
       "password": "Hemdadi71",
-      "wishList": [1, 2, 3, 4]
+      "wishList": [
+        {
+          "id": 2,
+          "name": "Air Max 270",
+          "brand": "Nike",
+          "price": 170,
+          "description": "The Air Max 270 features the tallest Air unit ever, providing maximum cushioning for all-day comfort. The shoe also has a sleek design and a breathable upper for a modern look.",
+          "image_url": "../../../public/Products/nike/2.png",
+          "size": [
+            40,
+            41,
+            43
+          ],
+          "color": [
+            "lighGray",
+            "green",
+            "purple",
+            "brown",
+            "blue",
+            "red",
+            "black"
+          ],
+          "inventory": 20
+        },
+        {
+          "id": 7,
+          "name": "Free RN Flyknit 3.0",
+          "brand": "Nike",
+          "price": 150,
+          "description": "The Air Max 90 is another classic running shoe that has been updated with modern materials and construction. It features a comfortable, cushioned sole and a sleek, minimalist design.",
+          "image_url": "../../../public/Products/nike/7.png",
+          "size": [
+            41,
+            43
+          ],
+          "color": [
+            "lighGray",
+            "green",
+            "purple",
+            "brown",
+            "blue",
+            "red",
+            "black"
+          ],
+          "inventory": 20
+        }
+      ],
+      "cart": [
+        {
+          "id": 1681325166416,
+          "color": "brown",
+          "size": "41",
+          "quantity": 3,
+          "price": 240,
+          "name": "Superstar",
+          "pic": "../../../public/Products/adidas/3.png"
+        }
+      ]
     },
     {
       "id": 2,
       "email": "hemdadi7@gmail.com",
       "password": "Hemdadi71",
-      "wishList": [5, 6, 7, 8]
+      "wishList": [
+        {
+          "id": 1,
+          "name": "Air Force 1",
+          "brand": "Nike",
+          "price": 130,
+          "description": "The Air Force 1 is a classic basketball shoe that has become a cultural icon. With its clean design and durable construction, the shoe is perfect for both casual wear and sports.",
+          "image_url": "../../../public/Products/nike/1.png",
+          "size": [
+            40,
+            41,
+            42
+          ],
+          "color": [
+            "lighGray",
+            "green",
+            "purple",
+            "brown",
+            "blue",
+            "red",
+            "black"
+          ],
+          "inventory": 20
+        },
+        {
+          "id": 2,
+          "name": "Air Max 270",
+          "brand": "Nike",
+          "price": 170,
+          "description": "The Air Max 270 features the tallest Air unit ever, providing maximum cushioning for all-day comfort. The shoe also has a sleek design and a breathable upper for a modern look.",
+          "image_url": "../../../public/Products/nike/2.png",
+          "size": [
+            40,
+            41,
+            43
+          ],
+          "color": [
+            "lighGray",
+            "green",
+            "purple",
+            "brown",
+            "blue",
+            "red",
+            "black"
+          ],
+          "inventory": 20
+        },
+        {
+          "id": 3,
+          "name": "React Infinity Run Flyknit",
+          "brand": "Nike",
+          "price": 180,
+          "description": "The React Element 55 is a modern sneaker that combines Nike's innovative React technology with a sleek design. It features a lightweight construction, a breathable upper, and a durable sole for all-day comfort.",
+          "image_url": "../../../public/Products/nike/3.png",
+          "size": [
+            42,
+            41,
+            43
+          ],
+          "color": [
+            "lighGray",
+            "green",
+            "purple",
+            "brown",
+            "blue",
+            "red",
+            "black"
+          ],
+          "inventory": 20
+        },
+        {
+          "id": 4,
+          "name": "Blazer Mid '77 Vintage",
+          "brand": "Nike",
+          "price": 120,
+          "description": "The Blazer Mid '77 Vintage is a modern running shoe that features Nike's innovative Flyknit technology for a lightweight, breathable fit. It also has a flexible sole for natural movement and a comfortable, cushioned insole.",
+          "image_url": "../../../public/Products/nike/4.png",
+          "size": [
+            44,
+            43
+          ],
+          "color": [
+            "lighGray",
+            "green",
+            "purple",
+            "brown",
+            "blue",
+            "red",
+            "black"
+          ],
+          "inventory": 20
+        }
+      ],
+      "cart": [
+        {
+          "id": 1681325258642,
+          "color": "purple",
+          "size": "41",
+          "quantity": 3,
+          "price": 390,
+          "name": "Air Force 1",
+          "pic": "../../../public/Products/nike/1.png"
+        }
+      ]
     }
   ],
   "products": [
@@ -21,8 +181,21 @@
       "price": 130,
       "description": "The Air Force 1 is a classic basketball shoe that has become a cultural icon. With its clean design and durable construction, the shoe is perfect for both casual wear and sports.",
       "image_url": "../../../public/Products/nike/1.png",
-      "size": [40, 41, 42],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        42
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 10
     },
     {
       "id": 2,
@@ -31,8 +204,21 @@
       "price": 170,
       "description": "The Air Max 270 features the tallest Air unit ever, providing maximum cushioning for all-day comfort. The shoe also has a sleek design and a breathable upper for a modern look.",
       "image_url": "../../../public/Products/nike/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 3,
@@ -41,8 +227,21 @@
       "price": 180,
       "description": "The React Element 55 is a modern sneaker that combines Nike's innovative React technology with a sleek design. It features a lightweight construction, a breathable upper, and a durable sole for all-day comfort.",
       "image_url": "../../../public/Products/nike/3.png",
-      "size": [42, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        42,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 4,
@@ -51,8 +250,20 @@
       "price": 120,
       "description": "The Blazer Mid '77 Vintage is a modern running shoe that features Nike's innovative Flyknit technology for a lightweight, breathable fit. It also has a flexible sole for natural movement and a comfortable, cushioned insole.",
       "image_url": "../../../public/Products/nike/4.png",
-      "size": [44, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        44,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 5,
@@ -61,8 +272,23 @@
       "price": 170,
       "description": "The Blazer Mid '77 is a retro basketball shoe that combines classic style with modern comfort. It features a suede and leather upper, a cushioned sole, and a vintage-inspired design.",
       "image_url": "../../../public/Products/nike/5.png",
-      "size": [40, 41, 42, 43, 44],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 6,
@@ -71,8 +297,21 @@
       "price": 170,
       "description": "The Jordan 1 is a legendary basketball shoe that has become a cultural icon. With its sleek design and comfortable construction, the shoe is perfect for both sports and casual wear.",
       "image_url": "../../../public/Products/nike/6.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 7,
@@ -81,8 +320,20 @@
       "price": 150,
       "description": "The Air Max 90 is another classic running shoe that has been updated with modern materials and construction. It features a comfortable, cushioned sole and a sleek, minimalist design.",
       "image_url": "../../../public/Products/nike/7.png",
-      "size": [41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 8,
@@ -91,8 +342,21 @@
       "price": 190,
       "description": "The Air Max 97 is a classic running shoe that features a full-length Air unit for maximum cushioning. It has a sleek design and a reflective upper for a bold, futuristic look.",
       "image_url": "../../../public/Products/nike/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 9,
@@ -101,8 +365,20 @@
       "price": 180,
       "description": "The Zoom Fly 3 is a classic running shoe that has become a fashion icon. With its timeless design and comfortable construction, the shoe is perfect for casual wear.",
       "image_url": "../../../public/Products/nike/9.png",
-      "size": [40, 44],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        44
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 10,
@@ -111,8 +387,21 @@
       "price": 100,
       "description": "The Dunk Low is a classic basketball shoe that has been updated with modern materials and construction. It features a comfortable, cushioned sole and a sleek, minimalist design.",
       "image_url": "../../../public/Products/nike/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 11,
@@ -121,8 +410,21 @@
       "price": 140,
       "description": " A retro-inspired lifestyle shoe with a chunky silhouette and vibrant colorways.",
       "image_url": "../../../public/Products/puma/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 12,
@@ -131,8 +433,21 @@
       "price": 90,
       "description": "A classic tennis shoe updated for modern style, with a low profile and clean design.",
       "image_url": "../../../public/Products/puma/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 13,
@@ -141,8 +456,21 @@
       "price": 90,
       "description": "A running shoe with responsive cushioning and energy return, designed for comfort and performance.",
       "image_url": "../../../public/Products/puma/3.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 14,
@@ -151,8 +479,21 @@
       "price": 145.99,
       "description": "A running shoe with a responsive foam midsole and breathable mesh upper, designed for long-distance runs.",
       "image_url": "../../../public/Products/puma/4.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 15,
@@ -161,8 +502,21 @@
       "price": 100,
       "description": "A soccer cleat with a customizable fit and lightweight design, designed for speed and agility on the field.",
       "image_url": "../../../public/Products/puma/5.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 16,
@@ -171,8 +525,21 @@
       "price": 80,
       "description": "A classic lifestyle shoe with a soft suede upper and iconic Puma Formstrip, available in a range of colors.",
       "image_url": "../../../public/Products/puma/6.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 17,
@@ -181,8 +548,21 @@
       "price": 150,
       "description": "A retro basketball shoe with a low profile and sleek design, originally worn by NBA legend Walt 'Clyde' Frazier.",
       "image_url": "../../../public/Products/puma/7.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 18,
@@ -191,8 +571,21 @@
       "price": 160,
       "description": "A running shoe with cushioning technology designed to reduce impact and improve stability, available in a range of styles.",
       "image_url": "../../../public/Products/puma/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 19,
@@ -201,8 +594,21 @@
       "price": 130,
       "description": "A running shoe with a responsive cushioning system and a unique, futuristic design.",
       "image_url": "../../../public/Products/puma/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 20,
@@ -211,8 +617,21 @@
       "price": 90,
       "description": "A versatile training shoe with a modern design and comfortable fit.",
       "image_url": "../../../public/Products/puma/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 21,
@@ -221,8 +640,21 @@
       "price": 180,
       "description": "The Ultraboost 21 is a high-performance running shoe designed to provide maximum comfort and energy return.",
       "image_url": "../../../public/Products/adidas/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 22,
@@ -231,8 +663,21 @@
       "price": 140,
       "description": "The NMD_R1 is a modern sneaker that combines Adidas' innovative design with retro elements.",
       "image_url": "../../../public/Products/adidas/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 23,
@@ -241,8 +686,21 @@
       "price": 80,
       "description": "The Superstar is a classic Adidas shoe that has become a fashion icon. It features a leather upper, a rubber shell toe, and a durable rubber outsole for all-day comfort.",
       "image_url": "../../../public/Products/adidas/3.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 24,
@@ -251,8 +709,21 @@
       "price": 80,
       "description": "The Stan Smith is another classic Adidas shoe that has become a fashion icon.",
       "image_url": "../../../public/Products/adidas/4.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 25,
@@ -261,8 +732,21 @@
       "price": 80,
       "description": "The Gazelle is a classic Adidas shoe that has been updated with modern materials and construction. It features a suede upper, leather stripes, and a durable rubber outsole for all-day comfort.",
       "image_url": "../../../public/Products/adidas/5.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 26,
@@ -271,8 +755,21 @@
       "price": 220,
       "description": " The Yeezy Boost 350 V2 is a high-end sneaker designed in collaboration with Kanye West. It features a Primeknit upper, Boost cushioning technology, and a translucent rubber outsole for a unique look.",
       "image_url": "../../../public/Products/adidas/6.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 27,
@@ -281,8 +778,21 @@
       "price": 130,
       "description": "The Nite Jogger is a modern sneaker that combines retro elements with contemporary design.",
       "image_url": "../../../public/Products/adidas/7.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 28,
@@ -291,8 +801,21 @@
       "price": 180,
       "description": "The Ultraboost DNA is a high-performance running shoe designed to provide maximum comfort and energy return. ",
       "image_url": "../../../public/Products/adidas/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 29,
@@ -301,8 +824,21 @@
       "price": 200,
       "description": "The Terrex Free Hiker is a high-performance hiking shoe designed to provide maximum comfort and support on the trail.",
       "image_url": "../../../public/Products/adidas/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 30,
@@ -311,8 +847,21 @@
       "price": 35,
       "description": "The Adilette Cloudfoam Plus is a comfortable slide designed for post-workout recovery.",
       "image_url": "../../../public/Products/adidas/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 31,
@@ -321,8 +870,21 @@
       "price": 160,
       "description": "The Gel-Kayano 28 is a high-performance running shoe designed for overpronators. It features Asics' signature Gel cushioning technology, a supportive upper, and a durable rubber outsole.",
       "image_url": "../../../public/Products/asics/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 32,
@@ -331,8 +893,21 @@
       "price": 150,
       "description": "The Gel-Nimbus 23 is a high-performance running shoe designed for neutral runners.",
       "image_url": "../../../public/Products/asics/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 33,
@@ -341,8 +916,21 @@
       "price": 180,
       "description": "The Gel-Quantum 360 6 is a high-performance running shoe designed for all types of runners.",
       "image_url": "../../../public/Products/asics/3.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 34,
@@ -351,8 +939,21 @@
       "price": 120,
       "description": "The GT-2000 10 is a high-performance running shoe designed for overpronators. ",
       "image_url": "../../../public/Products/asics/4.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 35,
@@ -361,8 +962,21 @@
       "price": 65,
       "description": "The Gel-Contend 7 is an affordable running shoe designed for beginners. It features a comfortable upper, a cushioned midsole, and a durable rubber outsole.",
       "image_url": "../../../public/Products/asics/5.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 36,
@@ -371,8 +985,21 @@
       "price": 180,
       "description": "The Gel-Kinsei OG is a retro running shoe that has been updated with modern materials and construction.",
       "image_url": "../../../public/Products/asics/6.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 37,
@@ -381,8 +1008,21 @@
       "price": 110,
       "description": "The Gel-Lyte III OG is a retro running shoe that has become a fashion icon.",
       "image_url": "../../../public/Products/asics/7.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 38,
@@ -391,8 +1031,21 @@
       "price": 140,
       "description": "The Gel-Resolution 8 is a high-performance tennis shoe designed for aggressive players",
       "image_url": "../../../public/Products/asics/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 39,
@@ -401,8 +1054,21 @@
       "price": 100,
       "description": "The Gel-Kayano Trainer is a retro training shoe that has been updated with modern materials and construction.",
       "image_url": "../../../public/Products/asics/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 40,
@@ -411,8 +1077,21 @@
       "price": 110,
       "description": "The Tartheredge is a high-performance racing shoe designed for speed. It features a lightweight upper, a cushioned midsole, and a durable rubber outsole.",
       "image_url": "../../../public/Products/asics/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 41,
@@ -421,8 +1100,21 @@
       "price": 130,
       "description": "The Nano X1 is a high-performance cross-training shoe designed to provide maximum support and stability.",
       "image_url": "../../../public/Products/reebok/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 42,
@@ -431,8 +1123,21 @@
       "price": 75,
       "description": "The Classic Leather is a retro sneaker that has become a fashion icon.",
       "image_url": "../../../public/Products/reebok/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 43,
@@ -441,8 +1146,21 @@
       "price": 75,
       "description": "The Club C 85 is a classic Reebok sneaker that has become a fashion icon.",
       "image_url": "../../../public/Products/reebok/3.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 44,
@@ -451,8 +1169,21 @@
       "price": 120,
       "description": "The Zig Kinetica is a high-performance running shoe designed to provide maximum energy return.",
       "image_url": "../../../public/Products/reebok/4.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 45,
@@ -461,8 +1192,21 @@
       "price": 100,
       "description": "The Floatride Energy 3 is a high-performance running shoe designed to provide maximum comfort and energy return.",
       "image_url": "../../../public/Products/reebok/5.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 46,
@@ -471,8 +1215,21 @@
       "price": 200,
       "description": "The Legacy Lifter II is a high-performance weightlifting shoe designed to provide maximum support and stability",
       "image_url": "../../../public/Products/reebok/6.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 47,
@@ -481,8 +1238,21 @@
       "price": 100,
       "description": "The HIIT TR is a high-performance cross-training shoe designed to provide maximum support and stability.",
       "image_url": "../../../public/Products/reebok/7.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 48,
@@ -491,8 +1261,21 @@
       "price": 65,
       "description": "The Royal BB4500 is a classic Reebok sneaker that has become a fashion icon",
       "image_url": "../../../public/Products/reebok/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 49,
@@ -501,8 +1284,21 @@
       "price": 65,
       "description": "The Classic Nylon is a retro sneaker that has become a fashion icon. It features a nylon upper, a cushioned midsole, and a durable rubber outsole.",
       "image_url": "../../../public/Products/reebok/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 50,
@@ -511,8 +1307,21 @@
       "price": 100,
       "description": "The Speed TR Flexweave is a high-performance cross-training shoe designed to provide maximum support and stability.",
       "image_url": "../../../public/Products/reebok/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 51,
@@ -521,8 +1330,21 @@
       "price": 150,
       "description": "The Fresh Foam 1080v11 is a high-performance running shoe designed for neutral runners.",
       "image_url": "../../../public/Products/new balance/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 52,
@@ -531,8 +1353,21 @@
       "price": 135,
       "description": "The Fresh Foam Hierro v6 is a high-performance trail running shoe designed to provide maximum support and stability.",
       "image_url": "../../../public/Products/new balance/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 53,
@@ -541,8 +1376,21 @@
       "price": 130,
       "description": "The FuelCell Rebel v2 is a high-performance running shoe designed for all types of runners.",
       "image_url": "../../../public/Products/new balance/3.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 54,
@@ -551,8 +1399,21 @@
       "price": 175,
       "description": "The 990v5 is a classic running shoe that has become a fashion icon. It features a supportive upper, a cushioned midsole, and a durable rubber outsole.",
       "image_url": "../../../public/Products/new balance/4.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 55,
@@ -561,8 +1422,21 @@
       "price": 80,
       "description": "The 574 is a classic running shoe that has become a fashion icon. It features a supportive upper, a cushioned midsole, and a durable rubber outsole.",
       "image_url": "../../../public/Products/new balance/5.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 56,
@@ -571,8 +1445,21 @@
       "price": 80,
       "description": "The Fresh Foam Roav is a versatile running shoe designed for all types of activities",
       "image_url": "../../../public/Products/new balance/6.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 57,
@@ -581,8 +1468,21 @@
       "price": 130,
       "description": "The Fresh Foam 860v11 is a high-performance running shoe designed for overpronators.",
       "image_url": "../../../public/Products/new balance/7.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 58,
@@ -591,8 +1491,21 @@
       "price": 90,
       "description": "The 997H is a classic running shoe that has been updated with modern materials and construction.",
       "image_url": "../../../public/Products/new balance/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 59,
@@ -601,8 +1514,21 @@
       "price": 100,
       "description": "The FuelCell Propel v2 is a high-performance running shoe designed to provide maximum energy return.",
       "image_url": "../../../public/Products/new balance/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 60,
@@ -611,8 +1537,21 @@
       "price": 115,
       "description": "The Minimus Trail 10v1 is a high-performance trail running shoe designed to provide maximum support and stability.",
       "image_url": "../../../public/Products/new balance/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 61,
@@ -621,8 +1560,21 @@
       "price": 50,
       "description": "The Chuck Taylor All Star Low Top is a classic canvas sneaker that has become an iconic piece of American culture.",
       "image_url": "../../../public/Products/converse/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 62,
@@ -631,8 +1583,21 @@
       "price": 55,
       "description": "The Chuck Taylor All Star High Top is a classic canvas sneaker that has become an iconic piece of American culture.",
       "image_url": "../../../public/Products/converse/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 63,
@@ -641,8 +1606,21 @@
       "price": 85,
       "description": "The Chuck 70 Low Top is a modern update to the classic Chuck Taylor design",
       "image_url": "../../../public/Products/converse/3.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 64,
@@ -651,8 +1629,21 @@
       "price": 90,
       "description": "The Chuck 70 High Top is a modern update to the classic Chuck Taylor design.",
       "image_url": "../../../public/Products/converse/4.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 65,
@@ -661,8 +1652,21 @@
       "price": 75,
       "description": "The One Star Suede Low Top is a classic sneaker that has been updated with a premium suede upper.",
       "image_url": "../../../public/Products/converse/5.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 66,
@@ -671,8 +1675,21 @@
       "price": 70,
       "description": "The Jack Purcell Signature Low Top is a classic canvas sneaker that has been updated with a cushioned footbed for added comfort.",
       "image_url": "../../../public/Products/converse/6.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 67,
@@ -681,8 +1698,21 @@
       "price": 50,
       "description": "The Chuck Taylor All Star Slip-On is a convenient and comfortable version of the classic Chuck Taylor design.",
       "image_url": "../../../public/Products/converse/7.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 68,
@@ -691,8 +1721,21 @@
       "price": 65,
       "description": "The Chuck Taylor All Star Leather Low Top is a classic sneaker that has been updated with a premium leather upper.",
       "image_url": "../../../public/Products/converse/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 69,
@@ -701,8 +1744,21 @@
       "price": 65,
       "description": "The Chuck Taylor All Star Street Mid Top is a modern update to the classic Chuck Taylor design.",
       "image_url": "../../../public/Products/converse/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 70,
@@ -711,8 +1767,21 @@
       "price": 70,
       "description": "The Chuck Taylor All Star Lift High Top is a modern update to the classic Chuck Taylor design.",
       "image_url": "../../../public/Products/converse/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     }
   ],
   "mostPopular": [
@@ -723,8 +1792,21 @@
       "price": 65,
       "description": "The Chuck Taylor All Star Leather Low Top is a classic sneaker that has been updated with a premium leather upper.",
       "image_url": "../../../public/Products/converse/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 69,
@@ -733,8 +1815,21 @@
       "price": 65,
       "description": "The Chuck Taylor All Star Street Mid Top is a modern update to the classic Chuck Taylor design.",
       "image_url": "../../../public/Products/converse/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 61,
@@ -743,8 +1838,21 @@
       "price": 50,
       "description": "The Chuck Taylor All Star Low Top is a classic canvas sneaker that has become an iconic piece of American culture.",
       "image_url": "../../../public/Products/converse/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 62,
@@ -753,8 +1861,21 @@
       "price": 55,
       "description": "The Chuck Taylor All Star High Top is a classic canvas sneaker that has become an iconic piece of American culture.",
       "image_url": "../../../public/Products/converse/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 50,
@@ -763,8 +1884,21 @@
       "price": 100,
       "description": "The Speed TR Flexweave is a high-performance cross-training shoe designed to provide maximum support and stability.",
       "image_url": "../../../public/Products/reebok/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 51,
@@ -773,8 +1907,21 @@
       "price": 150,
       "description": "The Fresh Foam 1080v11 is a high-performance running shoe designed for neutral runners.",
       "image_url": "../../../public/Products/new balance/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 52,
@@ -783,8 +1930,21 @@
       "price": 135,
       "description": "The Fresh Foam Hierro v6 is a high-performance trail running shoe designed to provide maximum support and stability.",
       "image_url": "../../../public/Products/new balance/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 41,
@@ -793,8 +1953,21 @@
       "price": 130,
       "description": "The Nano X1 is a high-performance cross-training shoe designed to provide maximum support and stability.",
       "image_url": "../../../public/Products/reebok/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 42,
@@ -803,8 +1976,21 @@
       "price": 75,
       "description": "The Classic Leather is a retro sneaker that has become a fashion icon.",
       "image_url": "../../../public/Products/reebok/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 43,
@@ -813,8 +1999,21 @@
       "price": 75,
       "description": "The Club C 85 is a classic Reebok sneaker that has become a fashion icon.",
       "image_url": "../../../public/Products/reebok/3.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 44,
@@ -823,8 +2022,21 @@
       "price": 120,
       "description": "The Zig Kinetica is a high-performance running shoe designed to provide maximum energy return.",
       "image_url": "../../../public/Products/reebok/4.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 29,
@@ -833,8 +2045,21 @@
       "price": 200,
       "description": "The Terrex Free Hiker is a high-performance hiking shoe designed to provide maximum comfort and support on the trail.",
       "image_url": "../../../public/Products/adidas/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 30,
@@ -843,8 +2068,21 @@
       "price": 35,
       "description": "The Adilette Cloudfoam Plus is a comfortable slide designed for post-workout recovery.",
       "image_url": "../../../public/Products/adidas/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 31,
@@ -853,8 +2091,21 @@
       "price": 160,
       "description": "The Gel-Kayano 28 is a high-performance running shoe designed for overpronators. It features Asics' signature Gel cushioning technology, a supportive upper, and a durable rubber outsole.",
       "image_url": "../../../public/Products/asics/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 17,
@@ -863,8 +2114,21 @@
       "price": 150,
       "description": "A retro basketball shoe with a low profile and sleek design, originally worn by NBA legend Walt 'Clyde' Frazier.",
       "image_url": "../../../public/Products/puma/7.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 18,
@@ -873,8 +2137,21 @@
       "price": 160,
       "description": "A running shoe with cushioning technology designed to reduce impact and improve stability, available in a range of styles.",
       "image_url": "../../../public/Products/puma/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 19,
@@ -883,8 +2160,21 @@
       "price": 130,
       "description": "A running shoe with a responsive cushioning system and a unique, futuristic design.",
       "image_url": "../../../public/Products/puma/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 20,
@@ -893,8 +2183,21 @@
       "price": 90,
       "description": "A versatile training shoe with a modern design and comfortable fit.",
       "image_url": "../../../public/Products/puma/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 7,
@@ -903,8 +2206,20 @@
       "price": 150,
       "description": "The Air Max 90 is another classic running shoe that has been updated with modern materials and construction. It features a comfortable, cushioned sole and a sleek, minimalist design.",
       "image_url": "../../../public/Products/nike/7.png",
-      "size": [41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 8,
@@ -913,8 +2228,21 @@
       "price": 190,
       "description": "The Air Max 97 is a classic running shoe that features a full-length Air unit for maximum cushioning. It has a sleek design and a reflective upper for a bold, futuristic look.",
       "image_url": "../../../public/Products/nike/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 9,
@@ -923,8 +2251,20 @@
       "price": 180,
       "description": "The Zoom Fly 3 is a classic running shoe that has become a fashion icon. With its timeless design and comfortable construction, the shoe is perfect for casual wear.",
       "image_url": "../../../public/Products/nike/9.png",
-      "size": [40, 44],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        44
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 10,
@@ -933,8 +2273,21 @@
       "price": 100,
       "description": "The Dunk Low is a classic basketball shoe that has been updated with modern materials and construction. It features a comfortable, cushioned sole and a sleek, minimalist design.",
       "image_url": "../../../public/Products/nike/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     }
   ],
   "myWishList": [
@@ -945,8 +2298,21 @@
       "price": 65,
       "description": "The Chuck Taylor All Star Leather Low Top is a classic sneaker that has been updated with a premium leather upper.",
       "image_url": "../../../public/Products/converse/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 69,
@@ -955,8 +2321,21 @@
       "price": 65,
       "description": "The Chuck Taylor All Star Street Mid Top is a modern update to the classic Chuck Taylor design.",
       "image_url": "../../../public/Products/converse/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 61,
@@ -965,8 +2344,21 @@
       "price": 50,
       "description": "The Chuck Taylor All Star Low Top is a classic canvas sneaker that has become an iconic piece of American culture.",
       "image_url": "../../../public/Products/converse/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 62,
@@ -975,8 +2367,21 @@
       "price": 55,
       "description": "The Chuck Taylor All Star High Top is a classic canvas sneaker that has become an iconic piece of American culture.",
       "image_url": "../../../public/Products/converse/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 50,
@@ -985,8 +2390,21 @@
       "price": 100,
       "description": "The Speed TR Flexweave is a high-performance cross-training shoe designed to provide maximum support and stability.",
       "image_url": "../../../public/Products/reebok/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 51,
@@ -995,8 +2413,21 @@
       "price": 150,
       "description": "The Fresh Foam 1080v11 is a high-performance running shoe designed for neutral runners.",
       "image_url": "../../../public/Products/new balance/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 52,
@@ -1005,8 +2436,21 @@
       "price": 135,
       "description": "The Fresh Foam Hierro v6 is a high-performance trail running shoe designed to provide maximum support and stability.",
       "image_url": "../../../public/Products/new balance/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 41,
@@ -1015,8 +2459,21 @@
       "price": 130,
       "description": "The Nano X1 is a high-performance cross-training shoe designed to provide maximum support and stability.",
       "image_url": "../../../public/Products/reebok/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 42,
@@ -1025,8 +2482,21 @@
       "price": 75,
       "description": "The Classic Leather is a retro sneaker that has become a fashion icon.",
       "image_url": "../../../public/Products/reebok/2.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 43,
@@ -1035,8 +2505,21 @@
       "price": 75,
       "description": "The Club C 85 is a classic Reebok sneaker that has become a fashion icon.",
       "image_url": "../../../public/Products/reebok/3.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 44,
@@ -1045,8 +2528,21 @@
       "price": 120,
       "description": "The Zig Kinetica is a high-performance running shoe designed to provide maximum energy return.",
       "image_url": "../../../public/Products/reebok/4.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 29,
@@ -1055,8 +2551,21 @@
       "price": 200,
       "description": "The Terrex Free Hiker is a high-performance hiking shoe designed to provide maximum comfort and support on the trail.",
       "image_url": "../../../public/Products/adidas/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 30,
@@ -1065,8 +2574,21 @@
       "price": 35,
       "description": "The Adilette Cloudfoam Plus is a comfortable slide designed for post-workout recovery.",
       "image_url": "../../../public/Products/adidas/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 31,
@@ -1075,8 +2597,21 @@
       "price": 160,
       "description": "The Gel-Kayano 28 is a high-performance running shoe designed for overpronators. It features Asics' signature Gel cushioning technology, a supportive upper, and a durable rubber outsole.",
       "image_url": "../../../public/Products/asics/1.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 17,
@@ -1085,8 +2620,21 @@
       "price": 150,
       "description": "A retro basketball shoe with a low profile and sleek design, originally worn by NBA legend Walt 'Clyde' Frazier.",
       "image_url": "../../../public/Products/puma/7.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 18,
@@ -1095,8 +2643,21 @@
       "price": 160,
       "description": "A running shoe with cushioning technology designed to reduce impact and improve stability, available in a range of styles.",
       "image_url": "../../../public/Products/puma/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 19,
@@ -1105,8 +2666,21 @@
       "price": 130,
       "description": "A running shoe with a responsive cushioning system and a unique, futuristic design.",
       "image_url": "../../../public/Products/puma/9.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 20,
@@ -1115,8 +2689,21 @@
       "price": 90,
       "description": "A versatile training shoe with a modern design and comfortable fit.",
       "image_url": "../../../public/Products/puma/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 7,
@@ -1125,8 +2712,20 @@
       "price": 150,
       "description": "The Air Max 90 is another classic running shoe that has been updated with modern materials and construction. It features a comfortable, cushioned sole and a sleek, minimalist design.",
       "image_url": "../../../public/Products/nike/7.png",
-      "size": [41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 8,
@@ -1135,8 +2734,21 @@
       "price": 190,
       "description": "The Air Max 97 is a classic running shoe that features a full-length Air unit for maximum cushioning. It has a sleek design and a reflective upper for a bold, futuristic look.",
       "image_url": "../../../public/Products/nike/8.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 9,
@@ -1145,8 +2757,20 @@
       "price": 180,
       "description": "The Zoom Fly 3 is a classic running shoe that has become a fashion icon. With its timeless design and comfortable construction, the shoe is perfect for casual wear.",
       "image_url": "../../../public/Products/nike/9.png",
-      "size": [40, 44],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        44
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     },
     {
       "id": 10,
@@ -1155,8 +2779,21 @@
       "price": 100,
       "description": "The Dunk Low is a classic basketball shoe that has been updated with modern materials and construction. It features a comfortable, cushioned sole and a sleek, minimalist design.",
       "image_url": "../../../public/Products/nike/10.png",
-      "size": [40, 41, 43],
-      "color": ["lighGray", "green", "purple", "brown", "blue", "red", "black"]
+      "size": [
+        40,
+        41,
+        43
+      ],
+      "color": [
+        "lighGray",
+        "green",
+        "purple",
+        "brown",
+        "blue",
+        "red",
+        "black"
+      ],
+      "inventory": 20
     }
   ]
 }

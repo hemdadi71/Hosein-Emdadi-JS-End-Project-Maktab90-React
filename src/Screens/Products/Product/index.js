@@ -1,6 +1,7 @@
 import El from '@/Library'
 import { handleSelectedProduct } from '../Function'
 
+
 export const renderProduct = (data, element) => {
   element.innerHTML = ''
   data.map(item => {

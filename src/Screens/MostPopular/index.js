@@ -4,6 +4,7 @@ import { svgs } from '@/svgs'
 import { FilterItems } from '@/Components/FilterItems'
 import { activeItem, filter } from '@/Components/FilterItems/Item/Function'
 import { Loading } from '@/Components/Loading'
+import { Products } from '../Products'
 
 export const MostPopularPage = () => {
   return El({
@@ -14,7 +15,7 @@ export const MostPopularPage = () => {
       El({
         element: 'div',
         className:
-          'flex items-center gap-[20px] text-[#152536] font-bold text-[20px] mt-[16px] pl-[32px] mb-[32px]',
+          'flex items-center gap-[20px] text-[#152536] font-bold text-[20px] mt-[16px] pl-[32px] mb-[25px]',
         child: [
           El({
             element: 'div',

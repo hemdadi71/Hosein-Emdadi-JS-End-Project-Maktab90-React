@@ -16,16 +16,12 @@ function WindowLoad() {
     main.innerHTML = ''
     const token = Cookies.get('token')
     if (token) {
-      main.append(Products())
+      if (location.pathname === '/') {
+        history.pushState(null, null, '/home')
+      }
+      Routing()
       const products = document.getElementById('products')
-      const login = JSON.parse(localStorage.getItem('login'))
       GetData('products').then(res => renderProduct(res.data, products))
-      // GetData('account').then(res => {
-      //   const activeAccount = res.data.find(item => item.email === login)
-      //   console.log(activeAccount.wishList)
-      // })
-      history.pushState(null, null, '/home')
-      // Routing()
     } else {
       main.appendChild(firstPage())
       history.pushState(null, null, '/')

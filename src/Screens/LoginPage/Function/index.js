@@ -98,8 +98,16 @@ export function handleSubmitForm(e) {
             GetData('products').then(res => renderProduct(res.data, products))
             // console.log(currectItem.wishList)
             history.pushState(null, null, '/home')
-            const Token = currectItem.email
-            localStorage.setItem('login', JSON.stringify(Token))
+            const Token = 'fl;jsdfljfsd;lfjf;lsfjglj;l@4kj'
+            const item = {
+              id: currectItem.id,
+              email: currectItem.email,
+              password: currectItem.password,
+              wishList: currectItem.wishList,
+              cart: currectItem.cart,
+            }
+            console.log(currectItem)
+            localStorage.setItem('login', JSON.stringify(item))
             if (checkbox.checked) {
               Cookies.set('token', Token, {
                 expires: 1,

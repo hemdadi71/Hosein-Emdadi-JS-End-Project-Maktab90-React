@@ -4,11 +4,23 @@ export const Notfound = () => {
   return El({
     element: 'div',
     className:
-      'text-2xl font-bold text-red-500 w-full absolute left-0 top-[510px] flex items-center justify-center',
+      'text-2xl w-full absolute left-0 top-[510px] flex flex-col text-center items-center justify-center font-Inter',
     child: [
       El({
         element: 'img',
-        src:'../../../public/Products/noProductFound.png'
+        className: 'w-[120px]',
+        src: '../../../public/Products/noProductFound.JPG',
+      }),
+      El({
+        element: 'p',
+        className: 'font-bold text-[20px]',
+        child: 'Not Found',
+      }),
+      El({
+        element: 'p',
+        className: 'text-[16px]',
+        child:
+          'Sorry,the keyword you entered cannot be found,pleas check again or search with another keyword.',
       }),
     ],
   })

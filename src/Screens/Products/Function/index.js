@@ -1,6 +1,6 @@
 import { GetData } from '@/API'
 import { Login } from '@/Screens/LoginPage'
-import Routing from '@/Screens/Routing/Function'
+import Routing, { routingBack } from '@/Screens/Routing/Function'
 import Cookies from 'js-cookie'
 import { renderProduct } from '../Product'
 import { Notfound } from '@/Components/NotFound'
@@ -12,7 +12,8 @@ import { ShopingPage } from '@/Screens/Shoping'
 import { SwiperForShoping } from '@/Screens/Shoping/Function'
 import { Size } from '@/Screens/Shoping/Size'
 import { Color } from '@/Screens/Shoping/Colors'
-
+import { renderWishListProduct } from '../WishListProduct'
+// .....................................................
 export function backToLogin() {
   const main = document.getElementById('main')
   main.innerHTML = ''
@@ -21,6 +22,23 @@ export function backToLogin() {
   Cookies.remove('token')
   Routing()
 }
+// .....................................................
+export function isWishList(id) {
+  const activeAccount = JSON.parse(localStorage.getItem('login'))
+  GetData('account').then(res => {
+    const account = res.data.find(item => item.id === activeAccount.id)
+    const isWishList = account.wishList.find(item => item.id === +id)
+    const heart = document.getElementById('heart')
+    if (isWishList) {
+      heart.classList.remove('bi-heart')
+      heart.classList.add('bi-heart-fill', 'text-red-500')
+    } else {
+      heart.classList.add('bi-heart')
+      heart.classList.remove('bi-heart-fill', 'text-red-500')
+    }
+  })
+}
+// .................................................................
 export function handleSelectedProduct(e) {
   const selectedId = e.currentTarget.parentElement.id
   // const loginedAccount = JSON.parse(localStorage.getItem('login'))
@@ -29,14 +47,29 @@ export function handleSelectedProduct(e) {
   //   const correntAccount = res.data.find(item => item.email === loginedAccount)
   //   console.log(correntAccount)
   // })
+
   GetData('products').then(res => {
     const selectedItem = res.data.find(item => item.id === +selectedId)
+    localStorage.setItem('selectedItem', JSON.stringify(selectedItem))
+    console.log(location.pathname)
     ShopingPage(selectedItem)
     Size(selectedItem.size)
     Color(selectedItem.color)
+    isWishList(selectedId)
     SwiperForShoping()
   })
+  const brand = JSON.parse(localStorage.getItem('brandPath'))
+  if (location.pathname === '/home/wishlist') {
+    history.pushState(null, null, '/home/wishlist/shoping')
+  } else if (location.pathname === '/home/most%20popular') {
+    history.pushState(null, null, '/home/most%20popular/shoping')
+  } else if (location.pathname === '/home') {
+    history.pushState(null, null, '/home/shoping')
+  } else if (location.pathname === brand.brandPath) {
+    history.pushState(null, null, `${brand.brandPath}/shoping`)
+  }
 }
+// ......................................................................
 export function handleSearch(input) {
   const products = document.getElementById('products')
   const filterItems = document.getElementById('filterItems')
@@ -65,14 +98,17 @@ export function handleSearch(input) {
     }
   })
 }
+// ........................................................................
 export function addLoading() {
   const loading = document.getElementById('loading')
   loading.classList.remove('hidden')
 }
+// ........................................................................
 export function removeLoading() {
   const loading = document.getElementById('loading')
   loading.classList.add('hidden')
 }
+// ........................................................................
 export function handleShowBrand(e) {
   const main = document.getElementById('main')
   const text = e.currentTarget.parentElement.childNodes[1].innerHTML
@@ -92,19 +128,19 @@ export function handleShowBrand(e) {
       const brandBox = document.getElementById('brandBox')
       renderProduct(filteredBrands, brandBox)
       history.pushState(null, null, `home/${text.toLowerCase()}`)
+      const brand = {
+        brandPath: location.pathname,
+        brandName: `${text.toLowerCase()}`,
+      }
+      localStorage.setItem('brandPath', JSON.stringify(brand))
     }
   })
 }
+// ........................................................................
 export function handleBackToHome() {
-  const main = document.getElementById('main')
-  main.innerHTML = ''
-  main.append(Products())
-  const products = document.getElementById('products')
-  GetData('products').then(res => {
-    renderProduct(res.data, products)
-  })
-  history.pushState(null, null, '/home')
+  routingBack()
 }
+// ........................................................................
 export function handleShowMostPopular() {
   addLoading()
   const main = document.getElementById('main')
@@ -117,15 +153,22 @@ export function handleShowMostPopular() {
   })
   history.pushState(null, null, 'home/most popular')
 }
+// .....................................................................
+export function renderWishList() {
+  const WishListProducts = document.getElementById('WishListProducts')
+  const activeAccount = JSON.parse(localStorage.getItem('login'))
+  GetData('account').then(res => {
+    const currentAccount = res.data.find(item => item.id === activeAccount.id)
+    renderWishListProduct(currentAccount.wishList, WishListProducts)
+    removeLoading()
+  })
+}
+// ........................................................................
 export function handleShowWishList() {
   addLoading()
   const main = document.getElementById('main')
   main.innerHTML = ''
   main.append(WishList())
-  const WishListProducts = document.getElementById('WishListProducts')
-  GetData('myWishList').then(res => {
-    renderProduct(res.data, WishListProducts)
-    removeLoading()
-  })
+  renderWishList()
   history.pushState(null, null, 'home/wishlist')
 }

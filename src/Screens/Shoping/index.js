@@ -2,7 +2,13 @@ import El from '@/Library'
 import { svgs } from '@/svgs'
 import { handleBackToHome } from '../Products/Function'
 import { SwiperShoping } from './Swiper'
-import { handleAddToCart, handleAddWishList, handleViewMore } from './Function'
+import {
+  handleAddQuantity,
+  handleAddToCart,
+  handleAddWishList,
+  handleMinusQuanity,
+  handleViewMore,
+} from './Function'
 
 export const ShopingPage = item => {
   const main = document.getElementById('main')
@@ -36,6 +42,7 @@ export const ShopingPage = item => {
                   }),
                   El({
                     element: 'i',
+                    id: 'heart',
                     onclick: handleAddWishList,
                     className:
                       'bi bi-heart text-[25px] transition-all ease-in-out duration-500',
@@ -156,6 +163,7 @@ export const ShopingPage = item => {
                       El({
                         element: 'span',
                         className: 'px-4',
+                        onclick: e => handleMinusQuanity(e.currentTarget),
                         child: [
                           El({
                             element: 'i',
@@ -166,10 +174,11 @@ export const ShopingPage = item => {
                       El({
                         element: 'span',
                         className: 'px-4',
-                        child: '1',
+                        child: 1,
                       }),
                       El({
                         element: 'span',
+                        onclick: e => handleAddQuantity(e.currentTarget),
                         className: 'px-4',
                         child: [
                           El({
@@ -209,8 +218,9 @@ export const ShopingPage = item => {
                   }),
                   El({
                     element: 'p',
+                    id: 'price',
                     className: 'text-[20px]',
-                    child: '$240.00',
+                    child: `$${item.price}`,
                   }),
                 ],
               }),

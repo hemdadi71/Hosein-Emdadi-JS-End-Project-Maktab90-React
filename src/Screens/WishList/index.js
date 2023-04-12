@@ -4,17 +4,19 @@ import { svgs } from '@/svgs'
 import { FilterItems } from '@/Components/FilterItems'
 import { activeItem, filter } from '@/Components/FilterItems/Item/Function'
 import { Loading } from '@/Components/Loading'
+import { Products } from '../Products'
+import { FilterWishList } from './Function'
 
 export const WishList = () => {
   return El({
     element: 'div',
     id: 'WishList',
-    className: 'w-full h-full font-Inter',
+    className: 'w-full h-full font-Inter pb-28',
     child: [
       El({
         element: 'div',
         className:
-          'flex items-center gap-[20px] text-[#152536] font-bold text-[20px] mt-[16px] pl-[32px] mb-[32px]',
+          'flex items-center gap-[20px] text-[#152536] font-bold text-[20px] mt-[16px] pl-[32px] mb-[25px]',
         child: [
           El({
             element: 'div',
@@ -24,7 +26,7 @@ export const WishList = () => {
           El({
             element: 'p',
             child: 'My Wishlist',
-          }),
+          }), 
         ],
       }),
       El({
@@ -36,16 +38,7 @@ export const WishList = () => {
             className: 'pl-[24px] pr-[4px]',
             child: [
               FilterItems({
-                onclick: e =>
-                  activeItem(
-                    e,
-                    filter(
-                      e,
-                      e.currentTarget.closest('#WishList').childNodes[1]
-                        .childNodes[2],
-                      'myWishList'
-                    )
-                  ),
+                onclick: FilterWishList,
                 className: 'pr-[20px]',
               }),
             ],
