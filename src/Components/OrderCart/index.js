@@ -2,7 +2,7 @@ import El from '@/Library'
 import {
   handleAddQuantity,
   handleMinusQuanity,
-  handleRemoveOrder,
+  handleShowModal,
 } from '@/Screens/Shoping/Function'
 
 export const orderCart = (data, elem) => {
@@ -41,8 +41,8 @@ export const orderCart = (data, elem) => {
                 }),
                 El({
                   element: 'img',
-                  onclick: handleRemoveOrder,
-                  className: 'w-[22px] h-[22px]',
+                  onclick: handleShowModal,
+                  className: 'w-[22px] h-[22px] trash',
                   src: '../../../src/Assets/img/trash-bin.png',
                 }),
               ],

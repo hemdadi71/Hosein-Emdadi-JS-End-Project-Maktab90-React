@@ -53,13 +53,22 @@
       ],
       "cart": [
         {
-          "id": 1681325166416,
+          "id": 1681379540409,
+          "price": 780,
+          "quantity": 6,
+          "pic": "../../../public/Products/nike/1.png",
+          "name": "Air Force 1",
+          "size": "42",
+          "color": "purple"
+        },
+        {
+          "id": 1681382006942,
           "color": "brown",
-          "size": "41",
-          "quantity": 3,
-          "price": 240,
-          "name": "Superstar",
-          "pic": "../../../public/Products/adidas/3.png"
+          "size": "43",
+          "quantity": 4,
+          "price": 880,
+          "name": "Yeezy Boost 350 V2",
+          "pic": "../../../public/Products/adidas/6.png"
         }
       ]
     },

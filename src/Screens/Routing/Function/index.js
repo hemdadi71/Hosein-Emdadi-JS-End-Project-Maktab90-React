@@ -2,6 +2,7 @@
 /* eslint-disable indent */
 /* eslint-disable no-unreachable */
 import { GetData } from '@/API'
+import { deactiveAllFooters } from '@/Components/FooterMenu/Function'
 import { orderCart } from '@/Components/OrderCart'
 import { CartPage } from '@/Screens/CartPage'
 import { FOF } from '@/Screens/FOF'
@@ -40,6 +41,10 @@ function Routing() {
       return true
     case '/cart':
       main.appendChild(Products())
+      const bagIcon = document.querySelector('.bi-bag')
+      deactiveAllFooters()
+      bagIcon.classList.remove('bi-bag')
+      bagIcon.classList.add('bi-bag-fill')
       const homeMain = document.getElementById('homeMain')
       homeMain.innerHTML = ''
       homeMain.append(CartPage())
@@ -51,7 +56,7 @@ function Routing() {
         orderCart(activeAccount.cart, cartBox)
         calculateCartTotalPrice()
       })
-      console.log('g')
+
       return true
     case '/home/most%20popular':
       main.appendChild(MostPopularPage())

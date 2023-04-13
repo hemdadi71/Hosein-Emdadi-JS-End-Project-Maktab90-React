@@ -5,12 +5,12 @@ export const FooterMenu = () => {
   return El({
     element: 'div',
     className:
-      'bg-white w-full justify-center flex z-40 items-center  fixed bottom-0  pb-[31.5px] pt-[10px]',
+      'bg-white w-full justify-center z-10 items-center  absolute bottom-0  pb-[31.5px] pt-[10px]',
     child: [
       El({
         element: 'div',
         id: 'footerMenu',
-        className: 'flex gap-[52.75px]',
+        className: 'flex gap-[52.75px] justify-center',
         child: [
           El({
             element: 'div',

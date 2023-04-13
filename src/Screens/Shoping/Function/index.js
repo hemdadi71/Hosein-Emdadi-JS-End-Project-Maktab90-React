@@ -1,10 +1,12 @@
 import {
+  FinalUpdateCart,
   GetData,
   PutData,
   PutDataCart,
   deleteData,
   deleteDataCart,
 } from '@/API'
+import { deactiveAllFooters } from '@/Components/FooterMenu/Function'
 import { orderCart } from '@/Components/OrderCart'
 import { CartPage } from '@/Screens/CartPage'
 import { Products } from '@/Screens/Products'
@@ -126,6 +128,10 @@ function addDataToCart() {
   const main = document.getElementById('main')
   main.innerHTML = ''
   main.appendChild(Products())
+  const bagIcon = document.querySelector('.bi-bag')
+  deactiveAllFooters()
+  bagIcon.classList.remove('bi-bag')
+  bagIcon.classList.add('bi-bag-fill')
   const homeMain = document.getElementById('homeMain')
   homeMain.innerHTML = ''
   homeMain.append(CartPage())
@@ -153,9 +159,6 @@ function addDataToCart() {
       })
     })
   })
-  // setTimeout(() => {
-
-  // }, 1000)
 }
 // ...................................................................
 export function handleAddToCart(e) {
@@ -229,18 +232,94 @@ export function handleAddQuantity(elem) {
   localStorage.setItem('qty_price', JSON.stringify(qty_price))
   handleCartPrices(elem, quantity)
 }
-// .........................................................................
+// ..........................................................................
 export function handleRemoveOrder(e) {
+  const removeCart = document.getElementById('removeCart')
   const cartBox = document.getElementById('cartBox')
-  const cartId = +e.currentTarget.closest('.cart').id
+  const cartElements = Array.from(cartBox.childNodes)
+  const selectedCart = cartElements.find(
+    item => item.id === removeCart.childNodes[0].id
+  )
   GetData('account').then(res => {
     const activeAccount = res.data.find(
       item => item.id === JSON.parse(localStorage.getItem('login')).id
     )
-    console.log(activeAccount)
-    const filteredItem = activeAccount.cart.filter(item => item.id !== cartId)
+    const filteredItem = activeAccount.cart.filter(
+      item => item.id !== +removeCart.childNodes[0].id
+    )
     deleteDataCart(activeAccount, filteredItem)
     orderCart(filteredItem, cartBox)
     calculateCartTotalPrice()
+    selectedCart.remove()
+  })
+  handleRemoveModal()
+}
+// .........................................................................
+export function handleShowModal(e) {
+  const modal = document.getElementById('modal')
+  const modalBg = document.getElementById('modalBg')
+  const removeCart = document.getElementById('removeCart')
+  modal.classList.remove('h-0')
+  modal.classList.add('h-[45%]')
+  modalBg.classList.remove('hidden')
+  const cartElements = Array.from(
+    e.currentTarget.closest('#cartBox').childNodes
+  )
+  const selectedCart = cartElements.find(
+    item => item.id === e.currentTarget.closest('.cart').id
+  )
+  removeCart.innerHTML = ''
+  const removeCarts = selectedCart.cloneNode(true)
+  removeCart.append(removeCarts)
+  document
+    .getElementById('removeCart')
+    .querySelector('.trash')
+    .classList.add('hidden')
+}
+// ..........................................................................
+export function handleRemoveModal() {
+  const modal = document.getElementById('modal')
+  const modalBg = document.getElementById('modalBg')
+  modal.classList.add('h-0')
+  modal.classList.remove('h-[40%]')
+  modalBg.classList.add('hidden')
+}
+// .....................................................................
+export function handleCheckout() {
+  const cartBox = document.getElementById('cartBox')
+  const cartElements = Array.from(cartBox.childNodes)
+  let cart = []
+  let itemData
+  let currectItem
+  GetData('account').then(res => {
+    const activeAccount = res.data.find(
+      item => item.id === JSON.parse(localStorage.getItem('login')).id
+    )
+    cartElements.map(item => {
+      currectItem = activeAccount.cart.find(i => i.id === +item.id)
+      const itemQuantity =
+        +item.childNodes[1].childNodes[2].childNodes[1].childNodes[0]
+          .childNodes[1].innerHTML
+      const array =
+        item.childNodes[1].childNodes[2].childNodes[0].innerHTML.split('')
+      array.shift()
+      itemData = {
+        id: +item.id,
+        price: +array.join(''),
+        quantity: itemQuantity,
+      }
+      itemData.pic = currectItem.pic
+      itemData.name = currectItem.name
+      itemData.size = currectItem.size
+      itemData.color = currectItem.color
+      cart.push(itemData)
+    })
+  })
+  console.log(cart)
+  GetData('account').then(res => {
+    const activeAccount = res.data.find(
+      item => item.id === JSON.parse(localStorage.getItem('login')).id
+    )
+    FinalUpdateCart(activeAccount, cart).then(res => console.log(res.data))
   })
 }

@@ -6,8 +6,8 @@ import { HomePage } from '@/Screens/HomePage'
 import { renderProduct } from '@/Screens/Products/Product'
 import { calculateCartTotalPrice } from '@/Screens/Shoping/Function'
 
-export function deactiveAllFooters(e) {
-  const footerItems = e.currentTarget.closest('#footerMenu').childNodes
+export function deactiveAllFooters() {
+  const footerItems = document.getElementById('footerMenu').childNodes
   footerItems.forEach(element => {
     const elemClass = element.childNodes[0].childNodes[0].classList
     if (elemClass.contains('bi-house-door-fill')) {
@@ -35,7 +35,7 @@ export function deactiveAllFooters(e) {
 
 export function handleActivePage(e) {
   const selectedIcon = e.currentTarget.childNodes[0]
-  deactiveAllFooters(e)
+  deactiveAllFooters()
   // ...................................................................
   if (selectedIcon.classList.contains('bi-house-door')) {
     selectedIcon.classList.remove('bi-house-door')
