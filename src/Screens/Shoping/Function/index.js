@@ -6,9 +6,11 @@ import {
   deleteData,
   deleteDataCart,
 } from '@/API'
+import { addressCart } from '@/Components/AddressCart'
 import { deactiveAllFooters } from '@/Components/FooterMenu/Function'
 import { orderCart } from '@/Components/OrderCart'
 import { CartPage } from '@/Screens/CartPage'
+import { CheckoutPage } from '@/Screens/Checkout'
 import { Products } from '@/Screens/Products'
 import Swiper from 'swiper/bundle'
 import 'swiper/css/bundle'
@@ -154,11 +156,12 @@ function addDataToCart() {
         const activeAccount = res.data.find(
           item => item.id === JSON.parse(localStorage.getItem('login')).id
         )
-        orderCart(activeAccount.cart, cartBox)
+        orderCart(activeAccount.cart, cartBox, { quantity: 'hidden' })
         calculateCartTotalPrice()
       })
     })
   })
+  history.pushState(null, null, '/cart')
 }
 // ...................................................................
 export function handleAddToCart(e) {
@@ -167,6 +170,7 @@ export function handleAddToCart(e) {
   e.currentTarget.childNodes[1].innerText = 'Added To Cart'
   addDataToCart()
 }
+// .................................................................
 // ............................................................................
 export function calculateCartTotalPrice() {
   const cartBox = document.getElementById('cartBox')
@@ -183,6 +187,7 @@ export function calculateCartTotalPrice() {
     0
   )
   totalPriceText.innerHTML = `$${totalPrice}`
+  localStorage.setItem('cartTotalPrice', totalPrice)
 }
 // ....................................................................
 function handleCartPrices(elem, quantity) {
@@ -233,7 +238,7 @@ export function handleAddQuantity(elem) {
   handleCartPrices(elem, quantity)
 }
 // ..........................................................................
-export function handleRemoveOrder(e) {
+export function handleRemoveOrder() {
   const removeCart = document.getElementById('removeCart')
   const cartBox = document.getElementById('cartBox')
   const cartElements = Array.from(cartBox.childNodes)
@@ -248,7 +253,7 @@ export function handleRemoveOrder(e) {
       item => item.id !== +removeCart.childNodes[0].id
     )
     deleteDataCart(activeAccount, filteredItem)
-    orderCart(filteredItem, cartBox)
+    orderCart(filteredItem, cartBox, { quantity: 'hidden' })
     calculateCartTotalPrice()
     selectedCart.remove()
   })
@@ -280,14 +285,19 @@ export function handleShowModal(e) {
 export function handleRemoveModal() {
   const modal = document.getElementById('modal')
   const modalBg = document.getElementById('modalBg')
+  modal.classList.remove('h-[45%]')
   modal.classList.add('h-0')
-  modal.classList.remove('h-[40%]')
   modalBg.classList.add('hidden')
 }
 // .....................................................................
 export function handleCheckout() {
+  const main = document.getElementById('main')
   const cartBox = document.getElementById('cartBox')
   const cartElements = Array.from(cartBox.childNodes)
+  main.innerHTML = ''
+  main.append(CheckoutPage())
+  const addressBox = document.getElementById('addressBox')
+  const orderListBox = document.getElementById('orderListBox')
   let cart = []
   let itemData
   let currectItem
@@ -312,14 +322,24 @@ export function handleCheckout() {
       itemData.name = currectItem.name
       itemData.size = currectItem.size
       itemData.color = currectItem.color
+      itemData.condition = 'active'
       cart.push(itemData)
     })
   })
-  console.log(cart)
   GetData('account').then(res => {
     const activeAccount = res.data.find(
       item => item.id === JSON.parse(localStorage.getItem('login')).id
     )
-    FinalUpdateCart(activeAccount, cart).then(res => console.log(res.data))
+    FinalUpdateCart(activeAccount, cart).then(res =>
+      orderCart(res.data.cart, orderListBox, {
+        quantityAction: 'hidden',
+        trash: 'hidden',
+      })
+    )
+    const defoultAddress = [JSON.parse(localStorage.getItem('selectedAddress'))]
+    addressCart(defoultAddress, addressBox, {
+      radioClass: 'hidden',
+    })
   })
+  history.pushState(null, null, '/checkout')
 }

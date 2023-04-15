@@ -6,6 +6,50 @@
       "password": "Hemdadi71",
       "wishList": [
         {
+          "id": 7,
+          "name": "Free RN Flyknit 3.0",
+          "brand": "Nike",
+          "price": 150,
+          "description": "The Air Max 90 is another classic running shoe that has been updated with modern materials and construction. It features a comfortable, cushioned sole and a sleek, minimalist design.",
+          "image_url": "../../../public/Products/nike/7.png",
+          "size": [
+            41,
+            43
+          ],
+          "color": [
+            "lighGray",
+            "green",
+            "purple",
+            "brown",
+            "blue",
+            "red",
+            "black"
+          ],
+          "inventory": 20
+        },
+        {
+          "id": 4,
+          "name": "Blazer Mid '77 Vintage",
+          "brand": "Nike",
+          "price": 120,
+          "description": "The Blazer Mid '77 Vintage is a modern running shoe that features Nike's innovative Flyknit technology for a lightweight, breathable fit. It also has a flexible sole for natural movement and a comfortable, cushioned insole.",
+          "image_url": "../../../public/Products/nike/4.png",
+          "size": [
+            44,
+            43
+          ],
+          "color": [
+            "lighGray",
+            "green",
+            "purple",
+            "brown",
+            "blue",
+            "red",
+            "black"
+          ],
+          "inventory": 20
+        },
+        {
           "id": 2,
           "name": "Air Max 270",
           "brand": "Nike",
@@ -27,48 +71,81 @@
             "black"
           ],
           "inventory": 20
-        },
-        {
-          "id": 7,
-          "name": "Free RN Flyknit 3.0",
-          "brand": "Nike",
-          "price": 150,
-          "description": "The Air Max 90 is another classic running shoe that has been updated with modern materials and construction. It features a comfortable, cushioned sole and a sleek, minimalist design.",
-          "image_url": "../../../public/Products/nike/7.png",
-          "size": [
-            41,
-            43
-          ],
-          "color": [
-            "lighGray",
-            "green",
-            "purple",
-            "brown",
-            "blue",
-            "red",
-            "black"
-          ],
-          "inventory": 20
         }
       ],
-      "cart": [
+      "cart": [],
+      "address": [
         {
-          "id": 1681379540409,
-          "price": 780,
-          "quantity": 6,
+          "id": "1",
+          "name": "Home",
+          "address": "101 Independence Avenue, S.E.Washington, D.C. 20559-6000"
+        },
+        {
+          "id": "2",
+          "name": "Office",
+          "address": "P.O. Box 1450Alexandria, VA 22313-1450"
+        },
+        {
+          "id": "3",
+          "name": "Apartment",
+          "address": "Consortium for Common Food Names2107 Wilson Blvd"
+        },
+        {
+          "id": "4",
+          "name": "Parent's House",
+          "address": "1506 Broadway Boulder, CO 80302-6296"
+        }
+      ],
+      "orders": [
+        {
+          "id": 1681578806127,
+          "price": 260,
+          "quantity": 2,
           "pic": "../../../public/Products/nike/1.png",
           "name": "Air Force 1",
           "size": "42",
-          "color": "purple"
+          "color": "lighGray",
+          "condition": "active"
         },
         {
-          "id": 1681382006942,
-          "color": "brown",
+          "id": 1681578842662,
+          "price": 720,
+          "quantity": 6,
+          "pic": "../../../public/Products/nike/4.png",
+          "name": "Blazer Mid '77 Vintage",
+          "size": "44",
+          "color": "blue",
+          "condition": "active"
+        },
+        {
+          "id": 1681578987486,
+          "price": 180,
+          "quantity": 2,
+          "pic": "../../../public/Products/puma/2.png",
+          "name": "Cali",
           "size": "43",
-          "quantity": 4,
-          "price": 880,
-          "name": "Yeezy Boost 350 V2",
-          "pic": "../../../public/Products/adidas/6.png"
+          "color": "lighGray",
+          "condition": "active"
+        },
+        {
+          "id": 1681579038322,
+          "price": 840,
+          "quantity": 6,
+          "pic": "../../../public/Products/puma/1.png",
+          "name": "RS-X",
+          "size": "43",
+          "color": "purple",
+          "condition": "active"
+        },
+        {
+          "id": 1681579223199,
+          "price": 840,
+          "quantity": 6,
+          "pic": "../../../public/Products/puma/4.png",
+          "name": "Puma Ignite",
+          "size": "43",
+          "color": "green",
+          "condition": "active"
         }
       ]
     },
@@ -179,7 +256,60 @@
           "name": "Air Force 1",
           "pic": "../../../public/Products/nike/1.png"
         }
+      ],
+      "orders": [],
+      "address": [
+        {
+          "id": "1",
+          "name": "Home",
+          "address": "101 Independence Avenue, S.E.Washington, D.C. 20559-6000"
+        },
+        {
+          "id": "2",
+          "name": "Office",
+          "address": "P.O. Box 1450Alexandria, VA 22313-1450"
+        },
+        {
+          "id": "3",
+          "name": "Apartment",
+          "address": "Consortium for Common Food Names2107 Wilson Blvd"
+        },
+        {
+          "id": "4",
+          "name": "Parent's House",
+          "address": "1506 Broadway Boulder, CO 80302-6296"
+        }
       ]
+    }
+  ],
+  "shippings": [
+    {
+      "id": 1,
+      "name": "Economy",
+      "description": "Estimated Arrival.Dec 20-23",
+      "price": 10,
+      "icon": "../../../src/Assets/img/box (1).png"
+    },
+    {
+      "id": 2,
+      "name": "Regular",
+      "description": "Estimated Arrival.Dec 20-22",
+      "price": 15,
+      "icon": "../../../src/Assets/img/delivery-box (1).png"
+    },
+    {
+      "id": 3,
+      "name": "Cargo",
+      "description": "Estimated Arrival.Dec 19-20",
+      "price": 20,
+      "icon": "../../../src/Assets/img/delivery-truck.png"
+    },
+    {
+      "id": 4,
+      "name": "Express",
+      "description": "Estimated Arrival.Dec 18-19",
+      "price": 30,
+      "icon": "../../../src/Assets/img/fast-delivery (1).png"
     }
   ],
   "products": [

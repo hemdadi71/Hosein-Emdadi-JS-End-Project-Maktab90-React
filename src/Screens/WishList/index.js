@@ -26,12 +26,12 @@ export const WishList = () => {
           El({
             element: 'p',
             child: 'My Wishlist',
-          }), 
+          }),
         ],
       }),
       El({
         element: 'div',
-        className: 'w-full h-full overflow-y-auto',
+        className: 'w-full h-full overflow-y-auto no-scrollbar',
         child: [
           El({
             element: 'div',

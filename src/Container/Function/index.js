@@ -4,6 +4,7 @@ import swiperFunc from '@/Components/Swipper/Function'
 import { firstPage } from '@/Screens/FirstPage'
 import { Login } from '@/Screens/LoginPage'
 import { Products } from '@/Screens/Products'
+import { addLoading, removeLoading } from '@/Screens/Products/Function'
 import { renderProduct } from '@/Screens/Products/Product'
 import Routing from '@/Screens/Routing/Function'
 import { Swipper } from '@/Screens/Swipper'
@@ -26,6 +27,7 @@ function WindowLoad() {
       main.appendChild(firstPage())
       history.pushState(null, null, '/')
       swiperFunc()
+      addLoading()
       setTimeout(() => {
         history.pushState(null, null, '/onboarding ')
         Routing()
@@ -34,6 +36,7 @@ function WindowLoad() {
         main.innerHTML = ''
         main.appendChild(SwipperPages())
         swiperFunc()
+        // Routing()
       }, 7000)
     }
   }

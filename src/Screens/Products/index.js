@@ -22,7 +22,7 @@ export const Products = () => {
       El({
         element: 'div',
         id: 'homeMain',
-        className: 'overflow-y-auto w-full h-full pb-[100px]',
+        className: 'overflow-y-auto no-scrollbar w-full h-full pb-[100px]',
         child: [HomePage()],
       }),
       FooterMenu(),

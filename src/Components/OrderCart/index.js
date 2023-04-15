@@ -5,13 +5,13 @@ import {
   handleShowModal,
 } from '@/Screens/Shoping/Function'
 
-export const orderCart = (data, elem) => {
+export const orderCart = (data, elem, { quantityAction, quantity, trash }) => {
   elem.innerHTML = ''
   data.map(item => {
     const cart = El({
       element: 'div',
       id: `${item.id}`,
-      className: 'bg-white p-4 rounded-[20px] mx-5 flex gap-4 font-Inter cart',
+      className: 'bg-white p-4 rounded-[20px] flex gap-4 font-Inter cart',
       child: [
         El({
           element: 'div',
@@ -42,7 +42,7 @@ export const orderCart = (data, elem) => {
                 El({
                   element: 'img',
                   onclick: handleShowModal,
-                  className: 'w-[22px] h-[22px] trash',
+                  className: `w-[22px] h-[22px] trash ${trash}`,
                   src: '../../../src/Assets/img/trash-bin.png',
                 }),
               ],
@@ -72,7 +72,6 @@ export const orderCart = (data, elem) => {
                 }),
                 El({
                   element: 'div',
-                  className: '',
                   child: `Size = ${item.size}`,
                 }),
               ],
@@ -89,8 +88,7 @@ export const orderCart = (data, elem) => {
                 El({
                   element: 'div',
                   id: 'quantityAction',
-                  className:
-                    'rounded-full bg-[#F3F3F3] py-[7px] px-1 font-bold',
+                  className: `rounded-full bg-[#F3F3F3] py-[7px] px-1 font-bold ${quantityAction}`,
                   child: [
                     El({
                       element: 'div',
@@ -126,6 +124,11 @@ export const orderCart = (data, elem) => {
                       ],
                     }),
                   ],
+                }),
+                El({
+                  element: 'div',
+                  className: `rounded-full py-1 px-3 bg-[#F3F3F3] ${quantity}`,
+                  child: `${item.quantity}`,
                 }),
               ],
             }),

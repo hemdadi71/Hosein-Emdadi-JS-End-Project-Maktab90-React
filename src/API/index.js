@@ -13,6 +13,9 @@ export async function PutData(activeAccount, item) {
       password: activeAccount.password,
       wishList: [...activeAccount.wishList, item],
       cart: activeAccount.cart,
+      address: activeAccount.address,
+      orders: activeAccount.orders,
+      condition: activeAccount.condition,
     }
   )
   return response
@@ -27,6 +30,9 @@ export async function deleteData(activeAccount, item) {
       password: activeAccount.password,
       wishList: item,
       cart: activeAccount.cart,
+      address: activeAccount.address,
+      orders: activeAccount.orders,
+      condition: activeAccount.condition,
     }
   )
   return response
@@ -41,6 +47,9 @@ export async function PutDataCart(activeAccount, item) {
       password: activeAccount.password,
       wishList: activeAccount.wishList,
       cart: [...activeAccount.cart, item],
+      address: activeAccount.address,
+      orders: activeAccount.orders,
+      condition: activeAccount.condition,
     }
   )
   return response
@@ -55,12 +64,15 @@ export async function deleteDataCart(activeAccount, item) {
       password: activeAccount.password,
       wishList: activeAccount.wishList,
       cart: item,
+      address: activeAccount.address,
+      orders: activeAccount.orders,
+      condition: activeAccount.condition,
     }
   )
   return response
 }
 // .........................................................................
-export async function FinalUpdateCart(activeAccount, item) {
+export async function FinalUpdateCart(activeAccount, item, orderItem) {
   const response = await axios.put(
     `http://localhost:3000/account/${activeAccount.id}`,
     {
@@ -69,7 +81,13 @@ export async function FinalUpdateCart(activeAccount, item) {
       password: activeAccount.password,
       wishList: activeAccount.wishList,
       cart: item,
+      address: activeAccount.address,
+      orders: orderItem
+        ? [...activeAccount.orders, orderItem]
+        : activeAccount.orders,
+      condition: activeAccount.condition,
     }
   )
   return response
 }
+// ..........................................................................

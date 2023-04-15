@@ -1,17 +1,22 @@
 import { FooterMenu } from '@/Components/FooterMenu'
 import El from '@/Library'
 import { svgs } from '@/svgs'
-import { handleCheckout, handleRemoveModal, handleRemoveOrder } from '../Shoping/Function'
+import {
+  handleCheckout,
+  handleRemoveModal,
+  handleRemoveOrder,
+} from '../Shoping/Function'
 
 export const CartPage = () => {
   return El({
     element: 'div',
-    className: 'max-w-[428px] relative h-full font-Inter overflow-y-hidden',
+    className:
+      'max-w-[428px] relative h-full font-Inter overflow-y-hidden no-scrollbar',
     child: [
       El({
         element: 'div',
         id: 'cartMain relative',
-        className: 'w-full h-full overflow-y-auto bg-gray-100 pb-28',
+        className: 'w-full h-full bg-gray-100 pb-28',
         child: [
           El({
             element: 'div',
@@ -42,43 +47,49 @@ export const CartPage = () => {
           }),
           El({
             element: 'div',
-            id: 'cartBox',
-            className: 'flex flex-col gap-6',
-          }),
-          El({
-            element: 'div',
-            className:
-              'absolute z-10 bottom-0 bg-[#ffff] rounded-t-[30px] w-full flex items-center justify-between py-5 px-5',
+            className: 'w-full h-full overflow-y-auto',
             child: [
               El({
                 element: 'div',
-                className: 'flex flex-col gap-1 justify-center',
-                child: [
-                  El({
-                    element: 'p',
-                    className: 'text-gray-600 text-[12px]',
-                    child: 'Total price',
-                  }),
-                  El({
-                    element: 'p',
-                    id: 'totalPrice',
-                    className: 'text-[20px] font-bold',
-                  }),
-                ],
+                id: 'cartBox',
+                className: 'flex flex-col gap-6 px-4',
               }),
               El({
-                element: 'button',
-                onclick:handleCheckout,
+                element: 'div',
                 className:
-                  'flex items-center gap-3 bg-[#0F0F0F] rounded-full px-[80px] py-[10px] text-white font-Inter shadow-lg shadow-gray-400',
+                  'absolute z-10 bottom-0 bg-[#ffff] rounded-t-[30px] w-full flex items-center justify-between py-5 px-5',
                 child: [
                   El({
-                    element: 'p',
-                    child: 'Checkout',
+                    element: 'div',
+                    className: 'flex flex-col gap-1 justify-center',
+                    child: [
+                      El({
+                        element: 'p',
+                        className: 'text-gray-600 text-[12px]',
+                        child: 'Total price',
+                      }),
+                      El({
+                        element: 'p',
+                        id: 'totalPrice',
+                        className: 'text-[20px] font-bold',
+                      }),
+                    ],
                   }),
                   El({
-                    element: 'i',
-                    className: 'bi bi-arrow-right-short text-[24px] mt-1',
+                    element: 'button',
+                    onclick: handleCheckout,
+                    className:
+                      'flex items-center gap-3 bg-[#0F0F0F] rounded-full px-[80px] py-[10px] text-white font-Inter shadow-lg shadow-gray-400',
+                    child: [
+                      El({
+                        element: 'p',
+                        child: 'Checkout',
+                      }),
+                      El({
+                        element: 'i',
+                        className: 'bi bi-arrow-right-short text-[24px] mt-1',
+                      }),
+                    ],
                   }),
                 ],
               }),
@@ -117,7 +128,7 @@ export const CartPage = () => {
           El({
             element: 'div',
             id: 'removeCart',
-            className: 'pt-5',
+            className: 'pt-5 px-6',
           }),
           El({
             element: 'div',

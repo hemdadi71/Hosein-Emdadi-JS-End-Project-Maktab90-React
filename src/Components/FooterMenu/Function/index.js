@@ -53,11 +53,12 @@ export function handleActivePage(e) {
     homeMain.innerHTML = ''
     homeMain.append(CartPage())
     const cartBox = document.getElementById('cartBox')
+    // const orderListBox = document.getElementById('orderListBox')
     GetData('account').then(res => {
       const activeAccount = res.data.find(
         item => item.id === JSON.parse(localStorage.getItem('login')).id
       )
-      orderCart(activeAccount.cart, cartBox)
+      orderCart(activeAccount.cart, cartBox,{ quantity: 'hidden' })
       calculateCartTotalPrice()
     })
     history.pushState(null, null, '/cart')

@@ -2,14 +2,26 @@
 /* eslint-disable indent */
 /* eslint-disable no-unreachable */
 import { GetData } from '@/API'
+import { addressCart } from '@/Components/AddressCart'
 import { deactiveAllFooters } from '@/Components/FooterMenu/Function'
 import { orderCart } from '@/Components/OrderCart'
+import { Promo, PromoCart } from '@/Components/PromoCart'
+import { ShippingCart } from '@/Components/ShippingCart'
 import { CartPage } from '@/Screens/CartPage'
+import { CheckoutPage } from '@/Screens/Checkout'
+import {
+  emptyAllAdressCurcles,
+  emptyAllShippingCurcles,
+} from '@/Screens/Checkout/Functions'
+import { choosedAddress } from '@/Screens/ChooseAddress'
+import { ChooseShippingPage } from '@/Screens/ChooseShipping'
 import { FOF } from '@/Screens/FOF'
 import { firstPage } from '@/Screens/FirstPage'
 import { HomePage1 } from '@/Screens/HomePage-1'
 import { Login } from '@/Screens/LoginPage'
 import { MostPopularPage } from '@/Screens/MostPopular'
+import { PaymentMethods } from '@/Screens/PaymentMethods'
+import { uncheckAllCircles } from '@/Screens/PaymentMethods/Functions'
 import { Products } from '@/Screens/Products'
 import { isWishList, renderWishList } from '@/Screens/Products/Function'
 import { renderProduct } from '@/Screens/Products/Product'
@@ -20,6 +32,7 @@ import {
   calculateCartTotalPrice,
 } from '@/Screens/Shoping/Function'
 import { Size } from '@/Screens/Shoping/Size'
+import { ViewOrdersPage } from '@/Screens/ViewOrders'
 import { wellcome } from '@/Screens/Wellcome'
 import { WishList } from '@/Screens/WishList'
 
@@ -39,6 +52,70 @@ function Routing() {
     case '/home':
       main.appendChild(Products())
       return true
+    case '/payment':
+      main.append(PaymentMethods())
+      uncheckAllCircles()
+      const checks = document.querySelectorAll('.check')
+      checks[0].classList.remove('hidden')
+      return true
+    case '/view%20orders':
+      main.append(ViewOrdersPage())
+      return true
+    case '/checkout':
+      main.appendChild(CheckoutPage())
+      const addressBox = document.getElementById('addressBox')
+      const orderListBox = document.getElementById('orderListBox')
+      const ChooseShippingBox = document.getElementById('ChooseShippingBox')
+      const shippingPrice = document.getElementById('shippingPrice')
+      const inputBox = document.getElementById('inputBox')
+      const totalPriceElem = document.getElementById('totalPrice')
+      const priceBox = document.getElementById('priceBox')
+      const amount = localStorage.getItem('cartTotalPrice')
+      GetData('account').then(res => {
+        const activeAccount = res.data.find(
+          item => item.id === JSON.parse(localStorage.getItem('login')).id
+        )
+        const defoultAddress = [
+          JSON.parse(localStorage.getItem('selectedAddress')),
+        ]
+        addressCart(defoultAddress, addressBox, {
+          radioClass: 'hidden',
+        })
+        orderCart(activeAccount.cart, orderListBox, {
+          quantityAction: 'hidden',
+          trash: 'hidden',
+        })
+      })
+      const chosenShipping = [
+        JSON.parse(localStorage.getItem('selectedShipping')),
+      ]
+      const selectedShipping = JSON.parse(
+        localStorage.getItem('selectedShipping')
+      )
+      const cartTotalPrice = localStorage.getItem('cartTotalPrice')
+      const promoPercent = localStorage.getItem('promo')
+      if (selectedShipping) {
+        ShippingCart(chosenShipping, ChooseShippingBox, {
+          radioClass: 'hidden',
+        })
+        shippingPrice.innerHTML = `$${
+          JSON.parse(localStorage.getItem('selectedShipping')).price
+        }`
+        totalPriceElem.innerHTML = `$${
+          selectedShipping.price + +cartTotalPrice
+        }`
+      }
+      if (promoPercent) {
+        PromoCart(localStorage.getItem('promo'), inputBox)
+        priceBox.append(Promo((localStorage.getItem('promo') / 100) * amount))
+        console.log((localStorage.getItem('promo') / 100) * amount)
+        const totalPrice = localStorage.getItem('totalPrice')
+        totalPriceElem.innerHTML = `$${
+          totalPrice - (localStorage.getItem('promo') / 100) * amount
+        }`
+      }
+
+      return true
     case '/cart':
       main.appendChild(Products())
       const bagIcon = document.querySelector('.bi-bag')
@@ -53,10 +130,30 @@ function Routing() {
         const activeAccount = res.data.find(
           item => item.id === JSON.parse(localStorage.getItem('login')).id
         )
-        orderCart(activeAccount.cart, cartBox)
+        orderCart(activeAccount.cart, cartBox, { quantity: 'hidden' })
         calculateCartTotalPrice()
       })
-
+      return true
+    case '/choose%20address':
+      main.append(choosedAddress())
+      const adressListBox = document.getElementById('adressListBox')
+      GetData('account').then(res => {
+        const activeAccount = res.data.find(
+          item => item.id === JSON.parse(localStorage.getItem('login')).id
+        )
+        addressCart(activeAccount.address, adressListBox, {
+          editClass: 'hidden',
+        })
+        emptyAllAdressCurcles()
+      })
+      return true
+    case '/choose%20shipping':
+      main.append(ChooseShippingPage())
+      const shippingBox = document.getElementById('shippingBox')
+      GetData('shippings').then(res => {
+        ShippingCart(res.data, shippingBox, { editClass: 'hidden' })
+        emptyAllShippingCurcles()
+      })
       return true
     case '/home/most%20popular':
       main.appendChild(MostPopularPage())
