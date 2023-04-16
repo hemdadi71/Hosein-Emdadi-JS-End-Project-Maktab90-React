@@ -5,7 +5,7 @@ export const ViewOrdersPage = () => {
   return El({
     element: 'div',
     className:
-      'max-w-[428px] relative h-full font-Inter overflow-y-hidden no-scrollbar',
+      'max-w-[428px] relative h-full font-Inter overflow-y-hidden bg-white',
     child: [
       El({
         element: 'div',
@@ -29,7 +29,7 @@ export const ViewOrdersPage = () => {
           }),
           El({
             element: 'div',
-            className: 'flex items-center gap-3',
+            className: 'flex items-center gap-6',
             child: [
               El({
                 element: 'img',
@@ -94,9 +94,8 @@ export const ViewOrdersPage = () => {
       }),
       El({
         element: 'div',
-        id: 'orderListBox',
-        className: 'px-6',
-        child:'orderListBox'
+        id: 'viewOrderListBox',
+        className: 'px-6 overflow-y-auto w-full h-full flex flex-col gap-4 pt-5 pb-40 no-scrollbar',
       }),
     ],
   })

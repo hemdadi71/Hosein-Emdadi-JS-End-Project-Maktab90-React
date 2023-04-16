@@ -129,7 +129,7 @@ export const HomePage = () => {
       El({
         element: 'div',
         className:
-          'm-[24px] grid grid-cols-2 md:gap-x-[16px] gap-x-[35px] gap-y-[23px]',
+          'm-[24px] grid grid-cols-2 md:gap-x-[16px] gap-x-[35px] gap-y-[23px] pb-36',
         id: 'products',
       }),
     ],

@@ -5,8 +5,9 @@ import {
   removeLoading,
   renderWishList,
 } from '@/Screens/Products/Function'
-import { renderProduct } from '@/Screens/Products/Product'
 import { renderWishListProduct } from '@/Screens/Products/WishListProduct'
+import { SearchPage } from '@/Screens/SearchPage'
+import { InputFocusOut } from '@/Screens/SearchPage/Functions'
 
 export const FilterWishList = e => {
   addLoading()
@@ -28,3 +29,12 @@ export const FilterWishList = e => {
     })
   }
 }
+// ..................................................................
+export function handleWishListSearch() {
+  const main = document.getElementById('main')
+  main.innerHTML = ''
+  main.append(SearchPage())
+  InputFocusOut()
+  history.pushState(null,null,'/home/wishlist/search')
+}
+// ..................................................................

@@ -1,10 +1,14 @@
 import { GetData } from '@/API'
+import { EmptyOrder } from '@/Components/EmptyOrder'
 import { FilterItems } from '@/Components/FilterItems'
 import { orderCart } from '@/Components/OrderCart'
+import { ViewOrdersCart } from '@/Components/ViewOrdersCart'
 import { CartPage } from '@/Screens/CartPage'
 import { HomePage } from '@/Screens/HomePage'
+import { Products } from '@/Screens/Products'
 import { renderProduct } from '@/Screens/Products/Product'
 import { calculateCartTotalPrice } from '@/Screens/Shoping/Function'
+import { ViewOrdersPage } from '@/Screens/ViewOrders'
 
 export function deactiveAllFooters() {
   const footerItems = document.getElementById('footerMenu').childNodes
@@ -35,6 +39,8 @@ export function deactiveAllFooters() {
 
 export function handleActivePage(e) {
   const selectedIcon = e.currentTarget.childNodes[0]
+  const homeMain = document.getElementById('homeMain')
+  const main = document.getElementById('main')
   deactiveAllFooters()
   // ...................................................................
   if (selectedIcon.classList.contains('bi-house-door')) {
@@ -49,22 +55,47 @@ export function handleActivePage(e) {
   } else if (selectedIcon.classList.contains('bi-bag')) {
     selectedIcon.classList.remove('bi-bag')
     selectedIcon.classList.add('bi-bag-fill')
-    const homeMain = document.getElementById('homeMain')
     homeMain.innerHTML = ''
     homeMain.append(CartPage())
     const cartBox = document.getElementById('cartBox')
-    // const orderListBox = document.getElementById('orderListBox')
     GetData('account').then(res => {
       const activeAccount = res.data.find(
         item => item.id === JSON.parse(localStorage.getItem('login')).id
       )
-      orderCart(activeAccount.cart, cartBox,{ quantity: 'hidden' })
+      orderCart(activeAccount.cart, cartBox, { quantity: 'hidden' })
       calculateCartTotalPrice()
     })
     history.pushState(null, null, '/cart')
   } else if (selectedIcon.classList.contains('bi-cart')) {
     selectedIcon.classList.remove('bi-cart')
     selectedIcon.classList.add('bi-cart-fill')
+    main.innerHTML = ''
+    main.appendChild(Products())
+    const ordersIcon = document.querySelector('.bi-cart')
+    deactiveAllFooters()
+    ordersIcon.classList.remove('bi-cart')
+    ordersIcon.classList.add('bi-cart-fill')
+    const homeMains = document.getElementById('homeMain')
+    homeMains.innerHTML = ''
+    homeMains.append(ViewOrdersPage())
+    const viewOrderListBox = document.getElementById('viewOrderListBox')
+    GetData('account').then(res => {
+      const activeAccount = res.data.find(
+        item => item.id === JSON.parse(localStorage.getItem('login')).id
+      )
+      const activeOrders = activeAccount.orders.filter(
+        item => item.condition === 'in delivery'
+      )
+      if (activeOrders.length === 0) {
+        viewOrderListBox.innerHTML = ''
+        viewOrderListBox.append(EmptyOrder('acitve'))
+      } else {
+        ViewOrdersCart(activeOrders, viewOrderListBox, {
+          title: 'Track Order',
+        })
+      }
+    })
+    history.pushState(null, null, '/view orders')
   } else if (selectedIcon.classList.contains('bi-wallet')) {
     selectedIcon.classList.remove('bi-wallet')
     selectedIcon.classList.add('bi-wallet-fill')

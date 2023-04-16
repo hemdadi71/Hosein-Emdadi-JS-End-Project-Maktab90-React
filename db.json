@@ -105,7 +105,7 @@
           "name": "Air Force 1",
           "size": "42",
           "color": "lighGray",
-          "condition": "active"
+          "condition": "completed"
         },
         {
           "id": 1681578842662,
@@ -115,7 +115,7 @@
           "name": "Blazer Mid '77 Vintage",
           "size": "44",
           "color": "blue",
-          "condition": "active"
+          "condition": "completed"
         },
         {
           "id": 1681578987486,
@@ -125,7 +125,7 @@
           "name": "Cali",
           "size": "43",
           "color": "lighGray",
-          "condition": "active"
+          "condition": "in delivery"
         },
         {
           "id": 1681579038322,
@@ -135,7 +135,7 @@
           "name": "RS-X",
           "size": "43",
           "color": "purple",
-          "condition": "active"
+          "condition": "in delivery"
         },
         {
           "id": 1681579223199,
@@ -145,7 +145,7 @@
           "name": "Puma Ignite",
           "size": "43",
           "color": "green",
-          "condition": "active"
+          "condition": "in delivery"
         }
       ]
     },

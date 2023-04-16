@@ -171,3 +171,7 @@ body {
 .black {
   background-color: #000;
 }
+/* ............................................................ */
+.cart{
+  box-shadow: 0 0 10px 10px #EDECEC;
+}

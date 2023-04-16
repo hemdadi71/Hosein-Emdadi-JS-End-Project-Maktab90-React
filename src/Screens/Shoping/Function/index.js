@@ -322,7 +322,7 @@ export function handleCheckout() {
       itemData.name = currectItem.name
       itemData.size = currectItem.size
       itemData.color = currectItem.color
-      itemData.condition = 'active'
+      itemData.condition = 'in delivery'
       cart.push(itemData)
     })
   })

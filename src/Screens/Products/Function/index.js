@@ -92,7 +92,13 @@ export function handleSearch(input) {
       removeLoading()
       input.value = ''
       if (filteredItems.length === 0) {
-        products.append(Notfound())
+        products.append(
+          Notfound({
+            top: 'top-[510px]',
+            width: 'w-[120px]',
+            padding: 'px-0',
+          })
+        )
         input.value = ''
       }
     }

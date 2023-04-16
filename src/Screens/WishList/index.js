@@ -5,7 +5,7 @@ import { FilterItems } from '@/Components/FilterItems'
 import { activeItem, filter } from '@/Components/FilterItems/Item/Function'
 import { Loading } from '@/Components/Loading'
 import { Products } from '../Products'
-import { FilterWishList } from './Function'
+import { FilterWishList, handleWishListSearch } from './Function'
 
 export const WishList = () => {
   return El({
@@ -15,17 +15,28 @@ export const WishList = () => {
     child: [
       El({
         element: 'div',
-        className:
-          'flex items-center gap-[20px] text-[#152536] font-bold text-[20px] mt-[16px] pl-[32px] mb-[25px]',
+        className: 'flex items-center justify-between pr-6',
         child: [
           El({
             element: 'div',
-            onclick: handleBackToHome,
-            innerHTML: svgs.leftArrow,
+            className:
+              'flex items-center gap-[20px] text-[#152536] font-bold text-[20px] mt-[16px] pl-[32px] mb-[25px]',
+            child: [
+              El({
+                element: 'div',
+                onclick: handleBackToHome,
+                innerHTML: svgs.leftArrow,
+              }),
+              El({
+                element: 'p',
+                child: 'My Wishlist',
+              }),
+            ],
           }),
           El({
-            element: 'p',
-            child: 'My Wishlist',
+            element: 'img',
+            onclick: handleWishListSearch,
+            src: '../../../src/Assets/img/magnifying-glass.png',
           }),
         ],
       }),

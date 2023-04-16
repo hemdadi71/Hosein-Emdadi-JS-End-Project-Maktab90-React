@@ -3,10 +3,12 @@
 /* eslint-disable no-unreachable */
 import { GetData } from '@/API'
 import { addressCart } from '@/Components/AddressCart'
+import { EmptyOrder } from '@/Components/EmptyOrder'
 import { deactiveAllFooters } from '@/Components/FooterMenu/Function'
 import { orderCart } from '@/Components/OrderCart'
 import { Promo, PromoCart } from '@/Components/PromoCart'
 import { ShippingCart } from '@/Components/ShippingCart'
+import { ViewOrdersCart } from '@/Components/ViewOrdersCart'
 import { CartPage } from '@/Screens/CartPage'
 import { CheckoutPage } from '@/Screens/Checkout'
 import {
@@ -25,6 +27,8 @@ import { uncheckAllCircles } from '@/Screens/PaymentMethods/Functions'
 import { Products } from '@/Screens/Products'
 import { isWishList, renderWishList } from '@/Screens/Products/Function'
 import { renderProduct } from '@/Screens/Products/Product'
+import { SearchPage } from '@/Screens/SearchPage'
+import { InputFocusOut } from '@/Screens/SearchPage/Functions'
 import { ShopingPage } from '@/Screens/Shoping'
 import { Color } from '@/Screens/Shoping/Colors'
 import {
@@ -52,6 +56,10 @@ function Routing() {
     case '/home':
       main.appendChild(Products())
       return true
+    case '/home/wishlist/search':
+      main.append(SearchPage())
+      InputFocusOut()
+      return true
     case '/payment':
       main.append(PaymentMethods())
       uncheckAllCircles()
@@ -59,7 +67,31 @@ function Routing() {
       checks[0].classList.remove('hidden')
       return true
     case '/view%20orders':
-      main.append(ViewOrdersPage())
+      main.appendChild(Products())
+      const ordersIcon = document.querySelector('.bi-cart')
+      deactiveAllFooters()
+      ordersIcon.classList.remove('bi-cart')
+      ordersIcon.classList.add('bi-cart-fill')
+      const homeMains = document.getElementById('homeMain')
+      homeMains.innerHTML = ''
+      homeMains.append(ViewOrdersPage())
+      const viewOrderListBox = document.getElementById('viewOrderListBox')
+      GetData('account').then(res => {
+        const activeAccount = res.data.find(
+          item => item.id === JSON.parse(localStorage.getItem('login')).id
+        )
+        const activeOrders = activeAccount.orders.filter(
+          item => item.condition === 'in delivery'
+        )
+        if (activeOrders.length === 0) {
+          viewOrderListBox.innerHTML = ''
+          viewOrderListBox.append(EmptyOrder({ condition: 'acitve' }))
+        } else {
+          ViewOrdersCart(activeOrders, viewOrderListBox, {
+            title: 'Track Order',
+          })
+        }
+      })
       return true
     case '/checkout':
       main.appendChild(CheckoutPage())
@@ -215,7 +247,6 @@ export default Routing
 export function routingBack() {
   const main = document.getElementById('main')
   const brand = JSON.parse(localStorage.getItem('brandPath'))
-  const selectedItem = JSON.parse(localStorage.getItem('selectedItem'))
   main.innerHTML = ''
   switch (location.pathname) {
     case '/home/wishlist':
@@ -238,6 +269,34 @@ export function routingBack() {
         renderProduct(res.data, mostPopularProducts)
       )
       history.pushState(null, null, '/home/most%20popular')
+      break
+    case '/view%20orders/shop':
+      main.appendChild(Products())
+      const ordersIcon = document.querySelector('.bi-cart')
+      deactiveAllFooters()
+      ordersIcon.classList.remove('bi-cart')
+      ordersIcon.classList.add('bi-cart-fill')
+      const homeMains = document.getElementById('homeMain')
+      homeMains.innerHTML = ''
+      homeMains.append(ViewOrdersPage())
+      const viewOrderListBox = document.getElementById('viewOrderListBox')
+      GetData('account').then(res => {
+        const activeAccount = res.data.find(
+          item => item.id === JSON.parse(localStorage.getItem('login')).id
+        )
+        const activeOrders = activeAccount.orders.filter(
+          item => item.condition === 'in delivery'
+        )
+        if (activeOrders.length === 0) {
+          viewOrderListBox.innerHTML = ''
+          viewOrderListBox.append(EmptyOrder({ condition: 'acitve' }))
+        } else {
+          ViewOrdersCart(activeOrders, viewOrderListBox, {
+            title: 'Track Order',
+          })
+        }
+      })
+      history.pushState(null, null, '/view%20orders')
       break
     case `${brand.brandPath}/shoping`:
       main.append(

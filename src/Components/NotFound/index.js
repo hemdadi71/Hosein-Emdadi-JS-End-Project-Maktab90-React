@@ -1,14 +1,13 @@
 import El from '@/Library'
 
-export const Notfound = () => {
+export const Notfound = props => {
   return El({
     element: 'div',
-    className:
-      'text-2xl w-full absolute left-0 top-[510px] flex flex-col text-center items-center justify-center font-Inter',
+    className: `text-2xl w-full absolute left-0 top-[510px] flex flex-col text-center items-center justify-center font-Inter ${props.top}`,
     child: [
       El({
         element: 'img',
-        className: 'w-[120px]',
+        className: `${props.width}`,
         src: '../../../public/Products/noProductFound.JPG',
       }),
       El({
@@ -18,7 +17,7 @@ export const Notfound = () => {
       }),
       El({
         element: 'p',
-        className: 'text-[16px]',
+        className: `text-[16px] ${props.padding}`,
         child:
           'Sorry,the keyword you entered cannot be found,pleas check again or search with another keyword.',
       }),
