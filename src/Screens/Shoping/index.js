@@ -110,7 +110,8 @@ export const ShopingPage = item => {
             child: [
               El({
                 element: 'div',
-                className: 'flex flex-col gap-3 w-[40%]',
+                id:'sizes',
+                className: 'flex flex-col justify-center relative gap-3 w-[40%]',
                 child: [
                   El({
                     element: 'p',
@@ -126,7 +127,8 @@ export const ShopingPage = item => {
               }),
               El({
                 element: 'div',
-                className: 'flex flex-col gap-3 w-[60%]',
+                id:'colors',
+                className: 'flex flex-col justify-center relative gap-3 w-[60%] pb-2',
                 child: [
                   El({
                     element: 'p',

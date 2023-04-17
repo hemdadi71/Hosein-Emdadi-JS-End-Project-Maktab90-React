@@ -197,6 +197,7 @@ function Routing() {
     case '/home/most%20popular/shoping':
     case '/home/wishlist/shoping':
     case '/home/shoping':
+      localStorage.removeItem('color'), localStorage.removeItem('size')
       ShopingPage(selectedItem)
       Size(selectedItem.size)
       Color(selectedItem.color)

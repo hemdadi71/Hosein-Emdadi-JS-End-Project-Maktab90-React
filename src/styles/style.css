@@ -175,3 +175,9 @@ body {
 .cart{
   box-shadow: 0 0 10px 10px #EDECEC;
 }
+#sizeValidation{
+  margin-left: 0 !important;
+}
+#colorValidation{
+  margin-left: 0 !important;
+}

@@ -1,6 +1,4 @@
-import { FooterMenu } from '@/Components/FooterMenu'
 import El from '@/Library'
-import { svgs } from '@/svgs'
 import {
   handleCheckout,
   handleRemoveModal,

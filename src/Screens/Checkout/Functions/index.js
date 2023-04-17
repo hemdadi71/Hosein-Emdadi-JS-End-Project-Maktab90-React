@@ -46,7 +46,6 @@ export function handleSubmitPromo(e) {
   const priceBox = document.getElementById('priceBox')
   const totalPriceElem = document.getElementById('totalPrice')
   const amount = localStorage.getItem('cartTotalPrice')
-  const totalPrice = localStorage.getItem('totalPrice')
   const localTotalPrice = localStorage.getItem('totalPrice')
   const inputValue = e.currentTarget.discount.value.toLowerCase()
   plus.classList.add('-rotate-180')
@@ -277,11 +276,28 @@ export function handleRemovePromo() {
 }
 // ....................................................................
 export function handleGoToPaymentList() {
-  const main = document.getElementById('main')
-  main.innerHTML = ''
-  main.append(PaymentMethods())
-  uncheckAllCircles()
-  const checks = document.querySelectorAll('.check')
-  checks[0].classList.remove('hidden')
-  history.pushState(null, null, '/payment')
+  const selectedShipping = localStorage.getItem('selectedShipping')
+  const ChooseShippingBox = document.getElementById('ChooseShippingBox')
+  const shippingValidation = document.getElementById('shippingValidation')
+  if (!selectedShipping) {
+    if (shippingValidation) return
+    ChooseShippingBox.append(
+      Validation({
+        text: 'Please choose shipping way',
+        className: 'text-red-500 absolute left-0 top-[100%]',
+        id: 'shippingValidation',
+      })
+    )
+  } else {
+    if (shippingValidation) {
+      shippingValidation.remove()
+    }
+    const main = document.getElementById('main')
+    main.innerHTML = ''
+    main.append(PaymentMethods())
+    uncheckAllCircles()
+    const checks = document.querySelectorAll('.check')
+    checks[0].classList.remove('hidden')
+    history.pushState(null, null, '/payment')
+  }
 }

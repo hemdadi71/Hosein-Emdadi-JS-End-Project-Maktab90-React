@@ -28,14 +28,15 @@
           "inventory": 20
         },
         {
-          "id": 4,
-          "name": "Blazer Mid '77 Vintage",
+          "id": 2,
+          "name": "Air Max 270",
           "brand": "Nike",
-          "price": 120,
-          "description": "The Blazer Mid '77 Vintage is a modern running shoe that features Nike's innovative Flyknit technology for a lightweight, breathable fit. It also has a flexible sole for natural movement and a comfortable, cushioned insole.",
-          "image_url": "../../../public/Products/nike/4.png",
+          "price": 170,
+          "description": "The Air Max 270 features the tallest Air unit ever, providing maximum cushioning for all-day comfort. The shoe also has a sleek design and a breathable upper for a modern look.",
+          "image_url": "../../../public/Products/nike/2.png",
           "size": [
-            44,
+            40,
+            41,
             43
           ],
           "color": [
@@ -50,12 +51,58 @@
           "inventory": 20
         },
         {
-          "id": 2,
-          "name": "Air Max 270",
+          "id": 6,
+          "name": "Air Jordan 1",
           "brand": "Nike",
           "price": 170,
-          "description": "The Air Max 270 features the tallest Air unit ever, providing maximum cushioning for all-day comfort. The shoe also has a sleek design and a breathable upper for a modern look.",
-          "image_url": "../../../public/Products/nike/2.png",
+          "description": "The Jordan 1 is a legendary basketball shoe that has become a cultural icon. With its sleek design and comfortable construction, the shoe is perfect for both sports and casual wear.",
+          "image_url": "../../../public/Products/nike/6.png",
+          "size": [
+            40,
+            41,
+            43
+          ],
+          "color": [
+            "lighGray",
+            "green",
+            "purple",
+            "brown",
+            "blue",
+            "red",
+            "black"
+          ],
+          "inventory": 20
+        },
+        {
+          "id": 37,
+          "name": "Gel-Lyte III OG",
+          "brand": "Asics",
+          "price": 110,
+          "description": "The Gel-Lyte III OG is a retro running shoe that has become a fashion icon.",
+          "image_url": "../../../public/Products/asics/7.png",
+          "size": [
+            40,
+            41,
+            43
+          ],
+          "color": [
+            "lighGray",
+            "green",
+            "purple",
+            "brown",
+            "blue",
+            "red",
+            "black"
+          ],
+          "inventory": 20
+        },
+        {
+          "id": 32,
+          "name": "Gel-Nimbus 23",
+          "brand": "Asics",
+          "price": 150,
+          "description": "The Gel-Nimbus 23 is a high-performance running shoe designed for neutral runners.",
+          "image_url": "../../../public/Products/asics/2.png",
           "size": [
             40,
             41,
@@ -145,6 +192,76 @@
           "name": "Puma Ignite",
           "size": "43",
           "color": "green",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681740504667,
+          "price": 340,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/4.png",
+          "name": "Blazer Mid '77 Vintage",
+          "size": "43",
+          "color": "green",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681740732470,
+          "price": 320,
+          "quantity": 2,
+          "pic": "../../../public/Products/puma/8.png",
+          "name": "Cell Endura",
+          "size": "43",
+          "color": "brown",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681741254484,
+          "price": 340,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/6.png",
+          "name": "Air Jordan 1",
+          "size": "41",
+          "color": "purple",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681741478519,
+          "price": 220,
+          "quantity": 2,
+          "pic": "../../../public/Products/asics/7.png",
+          "name": "Gel-Lyte III OG",
+          "size": "41",
+          "color": "green",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681745005663,
+          "price": 65,
+          "quantity": 1,
+          "pic": "../../../public/Products/asics/5.png",
+          "name": "Gel-Contend 7",
+          "size": "43",
+          "color": "green",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681745884069,
+          "price": 340,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/2.png",
+          "name": "Air Max 270",
+          "size": "41",
+          "color": "purple",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681746912812,
+          "price": 170,
+          "quantity": 1,
+          "pic": "../../../public/Products/nike/2.png",
+          "name": "Air Max 270",
+          "size": "43",
+          "color": "black",
           "condition": "in delivery"
         }
       ]
@@ -246,18 +363,7 @@
           "inventory": 20
         }
       ],
-      "cart": [
-        {
-          "id": 1681325258642,
-          "color": "purple",
-          "size": "41",
-          "quantity": 3,
-          "price": 390,
-          "name": "Air Force 1",
-          "pic": "../../../public/Products/nike/1.png"
-        }
-      ],
-      "orders": [],
+      "cart": [],
       "address": [
         {
           "id": "1",
@@ -278,6 +384,18 @@
           "id": "4",
           "name": "Parent's House",
           "address": "1506 Broadway Boulder, CO 80302-6296"
+        }
+      ],
+      "orders": [
+        {
+          "id": 1681325258642,
+          "price": 390,
+          "quantity": 3,
+          "pic": "../../../public/Products/nike/1.png",
+          "name": "Air Force 1",
+          "size": "41",
+          "color": "purple",
+          "condition": "in delivery"
         }
       ]
     }

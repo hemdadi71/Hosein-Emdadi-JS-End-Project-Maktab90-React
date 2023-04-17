@@ -1,4 +1,7 @@
 import { FinalUpdateCart, GetData } from '@/API'
+import { EmptyOrder } from '@/Components/EmptyOrder'
+import { deactiveAllFooters } from '@/Components/FooterMenu/Function'
+import { ViewOrdersCart } from '@/Components/ViewOrdersCart'
 import { Products } from '@/Screens/Products'
 import { renderProduct } from '@/Screens/Products/Product'
 import { ViewOrdersPage } from '@/Screens/ViewOrders'
@@ -30,6 +33,7 @@ export function handleConfirmefPayment() {
       )
     })
   })
+  localStorage.removeItem('promo')
 }
 // ......................................................................
 export function handleGoToHomePage() {
@@ -45,6 +49,30 @@ export function handleGoToHomePage() {
 export function handleViewOrders() {
   const main = document.getElementById('main')
   main.innerHTML = ''
-  main.append(ViewOrdersPage())
-  history.pushState(null,null,'/view orders')
+  main.appendChild(Products())
+  const ordersIcon = document.querySelector('.bi-cart')
+  deactiveAllFooters()
+  ordersIcon.classList.remove('bi-cart')
+  ordersIcon.classList.add('bi-cart-fill')
+  const homeMains = document.getElementById('homeMain')
+  homeMains.innerHTML = ''
+  homeMains.append(ViewOrdersPage())
+  const viewOrderListBox = document.getElementById('viewOrderListBox')
+  GetData('account').then(res => {
+    const activeAccount = res.data.find(
+      item => item.id === JSON.parse(localStorage.getItem('login')).id
+    )
+    const activeOrders = activeAccount.orders.filter(
+      item => item.condition === 'in delivery'
+    )
+    if (activeOrders.length === 0) {
+      viewOrderListBox.innerHTML = ''
+      viewOrderListBox.append(EmptyOrder({ condition: 'acitve' }))
+    } else {
+      ViewOrdersCart(activeOrders, viewOrderListBox, {
+        title: 'Track Order',
+      })
+    }
+  })
+  history.pushState(null, null, '/view orders')
 }

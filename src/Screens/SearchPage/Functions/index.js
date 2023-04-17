@@ -31,8 +31,9 @@ export function handleSearchWishList(input) {
         resultBox.innerHTML = ''
         resultBox.append(
           Notfound({
-            top: 'top-[170px]',
+            top: 'top-[20px]',
             width: 'w-[220px]',
+            padding: 'px-5',
           })
         )
       } else {
@@ -94,7 +95,7 @@ export function handleSelectedHistory(e) {
       resultBox.innerHTML = ''
       resultBox.append(
         Notfound({
-          top: 'top-[170px]',
+          top: 'top-[20px]',
           width: 'w-[220px]',
           padding: 'px-5',
         })

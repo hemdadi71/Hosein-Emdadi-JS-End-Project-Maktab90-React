@@ -20,6 +20,7 @@ export function backToLogin() {
   main.appendChild(Login())
   history.pushState(null, null, '/login')
   Cookies.remove('token')
+  localStorage.removeItem('selectedShipping')
   Routing()
 }
 // .....................................................
@@ -41,17 +42,11 @@ export function isWishList(id) {
 // .................................................................
 export function handleSelectedProduct(e) {
   const selectedId = e.currentTarget.parentElement.id
-  // const loginedAccount = JSON.parse(localStorage.getItem('login'))
-  // console.log(loginedAccount)
-  // GetData('account').then(res => {
-  //   const correntAccount = res.data.find(item => item.email === loginedAccount)
-  //   console.log(correntAccount)
-  // })
-
   GetData('products').then(res => {
     const selectedItem = res.data.find(item => item.id === +selectedId)
     localStorage.setItem('selectedItem', JSON.stringify(selectedItem))
-    console.log(location.pathname)
+    const item = { quantity: 1, price: selectedItem.price }
+    localStorage.setItem('qty_price', JSON.stringify(item))
     ShopingPage(selectedItem)
     Size(selectedItem.size)
     Color(selectedItem.color)

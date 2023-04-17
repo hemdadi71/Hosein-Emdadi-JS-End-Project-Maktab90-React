@@ -9,6 +9,7 @@ import {
 import { addressCart } from '@/Components/AddressCart'
 import { deactiveAllFooters } from '@/Components/FooterMenu/Function'
 import { orderCart } from '@/Components/OrderCart'
+import { Validation } from '@/Components/Validation'
 import { CartPage } from '@/Screens/CartPage'
 import { CheckoutPage } from '@/Screens/Checkout'
 import { Products } from '@/Screens/Products'
@@ -141,8 +142,8 @@ function addDataToCart() {
     id: Date.now(),
     color: localStorage.getItem('color'),
     size: localStorage.getItem('size'),
-    quantity: JSON.parse(localStorage.getItem('qty_price')).quantity,
-    price: JSON.parse(localStorage.getItem('qty_price')).price,
+    quantity: JSON.parse(localStorage.getItem('qty_price')).quantity || 1,
+    price: JSON.parse(localStorage.getItem('qty_price')).price || JSON.parse(localStorage.getItem('selectedItem')).price,
     name: JSON.parse(localStorage.getItem('selectedItem')).name,
     pic: JSON.parse(localStorage.getItem('selectedItem')).image_url,
   }
@@ -161,14 +162,62 @@ function addDataToCart() {
       })
     })
   })
+  localStorage.removeItem('color'), localStorage.removeItem('size')
   history.pushState(null, null, '/cart')
+}
+// .................................................
+function sizeValidation() {
+  const sizes = document.getElementById('sizes')
+  const sizeValidation = document.getElementById('sizeValidation')
+  if (!localStorage.getItem('size')) {
+    if (sizeValidation) return
+    sizes.append(
+      Validation({
+        text: 'choose a size',
+        className: 'text-red-500 w-full absolute left-0 top-[97%]',
+        id: 'sizeValidation',
+      })
+    )
+  } else {
+    if (sizeValidation) {
+      sizeValidation.remove()
+    }
+  }
+}
+// ..........................................................
+function colorValidation() {
+  const colors = document.getElementById('colors')
+  const colorValidation = document.getElementById('colorValidation')
+  if (!localStorage.getItem('color')) {
+    if (colorValidation) return
+    colors.append(
+      Validation({
+        text: 'choose a color',
+        className: 'text-red-500 w-full absolute left-0 top-[97%]',
+        id: 'colorValidation',
+      })
+    )
+  } else {
+    if (colorValidation) {
+      colorValidation.remove()
+    }
+  }
 }
 // ...................................................................
 export function handleAddToCart(e) {
-  e.currentTarget.childNodes[0].classList.remove('bi-bag-fill')
-  e.currentTarget.childNodes[0].classList.add('bi-bag-check-fill')
-  e.currentTarget.childNodes[1].innerText = 'Added To Cart'
-  addDataToCart()
+  let flag = false
+  sizeValidation()
+  colorValidation()
+  if (localStorage.getItem('size') && localStorage.getItem('color')) {
+    flag = true
+  }
+  if (flag) {
+    e.currentTarget.childNodes[0].classList.remove('bi-bag-fill')
+    e.currentTarget.childNodes[0].classList.add('bi-bag-check-fill')
+    e.currentTarget.childNodes[1].innerText = 'Added To Cart'
+    addDataToCart()
+    flag = false
+  }
 }
 // .................................................................
 // ............................................................................
@@ -291,8 +340,9 @@ export function handleRemoveModal() {
 }
 // .....................................................................
 export function handleCheckout() {
-  const main = document.getElementById('main')
   const cartBox = document.getElementById('cartBox')
+  if (cartBox.childNodes.length === 0) return
+  const main = document.getElementById('main')
   const cartElements = Array.from(cartBox.childNodes)
   main.innerHTML = ''
   main.append(CheckoutPage())

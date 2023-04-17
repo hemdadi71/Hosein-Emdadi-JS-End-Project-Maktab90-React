@@ -104,7 +104,7 @@ export const SearchPage = () => {
         element: 'div',
         id: 'resultBox',
         className:
-          'pb-[150px] pt-[24px] grid grid-cols-2 gap-x-[16px] w-full h-full',
+          'pb-[150px] pt-[24px] grid grid-cols-2 gap-x-[16px] w-full h-full relative',
       }),
       Loading({
         className: 'top-36',

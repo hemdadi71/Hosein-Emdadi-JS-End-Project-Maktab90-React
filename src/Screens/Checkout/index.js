@@ -19,7 +19,7 @@ export const CheckoutPage = () => {
         child: [
           El({
             element: 'div',
-            className: 'flex items-center gap-2',
+            className: 'flex items-center gap-3',
             child: [
               El({
                 element: 'div',
@@ -35,12 +35,12 @@ export const CheckoutPage = () => {
           }),
           El({
             element: 'div',
-            className: 'border-2 border-gray-700 rounded-full py-[1px] px-[5px]',
+            className: 'border-2 border-gray-700 rounded-full py-[1px] px-[6px]',
             child: [
               El({
                 element: 'i',
                 className:
-                  'bi bi-three-dots text-[15px] rounded-full bg-white',
+                  'bi bi-three-dots text-[15px] rounded-full bg-gray-100',
               }),
             ],
           }),
@@ -102,7 +102,7 @@ export const CheckoutPage = () => {
                 element: 'div',
                 onclick: handleChooseShippingPage,
                 id: 'ChooseShippingBox',
-                className: 'mt-5',
+                className: 'mt-5 pb-1 flex flex-col gap-3 relative',
                 child: [
                   El({
                     element: 'div',
