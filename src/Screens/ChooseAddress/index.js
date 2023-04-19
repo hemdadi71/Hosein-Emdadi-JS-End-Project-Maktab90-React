@@ -3,6 +3,7 @@ import { svgs } from '@/svgs'
 import { handleBackToCheckoutPage } from '../Checkout/Functions'
 import {
   handleAddNewAddress,
+  handleCloseAddAddress,
   handleSubmitAddress,
 } from './functions'
 
@@ -69,7 +70,7 @@ export const choosedAddress = () => {
             child: [
               El({
                 element: 'div',
-                className: 'w-full px-5 py-6 bg-white rounded-[24px]',
+                className: 'w-full px-5 py-6 bg-white rounded-[24px] relative',
                 child: [
                   El({
                     element: 'form',
@@ -98,7 +99,7 @@ export const choosedAddress = () => {
                       }),
                       El({
                         element: 'div',
-                        id:'desBox',
+                        id: 'desBox',
                         className: 'flex flex-col gap-2 relative',
                         child: [
                           El({
@@ -118,9 +119,14 @@ export const choosedAddress = () => {
                         element: 'input',
                         type: 'submit',
                         value: 'Add Address',
-                        className: 'px-5 py-3 rounded-full bg-[#F5F5F5]',
+                        className: 'px-5 py-3 rounded-full bg-[#F5F5F5] mt-1',
                       }),
                     ],
+                  }),
+                  El({
+                    element: 'i',
+                    onclick: handleCloseAddAddress,
+                    className: 'bi bi-x-lg absolute top-2 right-5',
                   }),
                 ],
               }),

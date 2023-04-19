@@ -8,6 +8,13 @@ export const handleAddNewAddress = () => {
   addAddressBox.classList.remove('h-0')
   addAddressBox.classList.add('h-[360px]')
 }
+export function handleCloseAddAddress() {
+  const addAddressBox = document.getElementById('addAddressBox')
+  const form = document.getElementById('form')
+  addAddressBox.classList.add('h-0')
+  addAddressBox.classList.remove('h-[360px]')
+  form.reset()
+}
 export function handleSubmitAddress(e) {
   e.preventDefault()
   const adressListBox = document.getElementById('adressListBox')
@@ -15,9 +22,6 @@ export function handleSubmitAddress(e) {
   const desBox = document.getElementById('desBox')
   const titleValidation = document.getElementById('titleValidation')
   const desValidation = document.getElementById('desValidation')
-  const addAddressBox = document.getElementById('addAddressBox')
-  addAddressBox.classList.add('h-0')
-  addAddressBox.classList.remove('h-[360px]')
   const titleValue = e.currentTarget.title.value
   const desValue = e.currentTarget.description.value
   GetData('account').then(res => {
@@ -37,6 +41,7 @@ export function handleSubmitAddress(e) {
           editClass: 'hidden',
         })
         emptyAllAdressCurcles()
+        handleCloseAddAddress()
       })
     }
   })
