@@ -23,17 +23,17 @@ export const SwipperPages = () => {
               El({
                 element: 'div',
                 id: 'firstLine',
-                className: 'w-[30px] h-[2px] bg-red-600 line',
+                className: 'w-[30px] h-[2px] bg-black line',
               }),
               El({
                 element: 'div',
                 id: 'secondLine',
-                className: 'w-[30px] h-[2px] bg-black line',
+                className: 'w-[30px] h-[2px] bg-gray-300 line',
               }),
               El({
                 element: 'div',
                 id: 'thirdLine',
-                className: 'w-[30px] h-[2px] bg-black line',
+                className: 'w-[30px] h-[2px] bg-gray-300 line',
               }),
             ],
           }),

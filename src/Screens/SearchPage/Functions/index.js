@@ -31,16 +31,16 @@ export function handleSearchWishList(input) {
         resultBox.innerHTML = ''
         resultBox.append(
           Notfound({
-            top: 'top-[20px]',
+            top: 'top-[100px]',
             width: 'w-[220px]',
             padding: 'px-5',
           })
         )
       } else {
-        resultName.innerHTML = `Results for "${input.value}"`
-        resultCount.innerHTML = `${filteredItems.length} founds`
         renderWishListProduct(filteredItems, resultBox)
       }
+      resultName.innerHTML = `Results for "${input.value}"`
+      resultCount.innerHTML = `${filteredItems.length} founds`
       history.classList.add('hidden')
       removeLoading()
     })
@@ -80,6 +80,8 @@ export function InputFocusOut() {
 export function handleSelectedHistory(e) {
   const resultBox = document.getElementById('resultBox')
   const history = document.getElementById('history')
+  const resultName = document.getElementById('resultName')
+  const resultCount = document.getElementById('resultCount')
   const selectedHistory = e.currentTarget.innerHTML
   addLoading()
   GetData('account').then(res => {
@@ -95,7 +97,7 @@ export function handleSelectedHistory(e) {
       resultBox.innerHTML = ''
       resultBox.append(
         Notfound({
-          top: 'top-[20px]',
+          top: 'top-[100px]',
           width: 'w-[220px]',
           padding: 'px-5',
         })
@@ -103,6 +105,8 @@ export function handleSelectedHistory(e) {
     } else {
       renderWishListProduct(filteredItems, resultBox)
     }
+    resultName.innerHTML = `Results for "${selectedHistory}"`
+    resultCount.innerHTML = `${filteredItems.length} founds`
     history.classList.add('hidden')
     removeLoading()
   })

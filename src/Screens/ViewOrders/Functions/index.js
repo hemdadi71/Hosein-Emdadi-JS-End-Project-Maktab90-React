@@ -66,6 +66,7 @@ export function handleGoToItemPage(e) {
   if (e.currentTarget.childNodes[0].innerHTML.toLowerCase() === 'buy again') {
     GetData('products').then(res => {
       const selectedProduct = res.data.find(item => item.name.toLowerCase() === selectedProductName.toLowerCase())
+      localStorage.setItem('selectedItem',JSON.stringify(selectedProduct))
       ShopingPage(selectedProduct)
       Size(selectedProduct.size)
       Color(selectedProduct.color)
@@ -73,5 +74,5 @@ export function handleGoToItemPage(e) {
       SwiperForShoping()
     })
   }
-  history.pushState(null,null,'/view orders/shop')
+  history.pushState(null,null,'/view orders/shoping')
 }

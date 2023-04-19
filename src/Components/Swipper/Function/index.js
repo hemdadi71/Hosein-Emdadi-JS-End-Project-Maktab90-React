@@ -51,10 +51,10 @@ function changeLineColor(el, txt) {
   button.addEventListener('click', goToLogin)
   button.innerHTML = `${txt}`
   scrollbar.forEach(elem => {
+    elem.classList.remove('bg-gray-300')
     elem.classList.remove('bg-black')
-    elem.classList.remove('bg-red-600')
-    elem.classList.add('bg-black')
+    elem.classList.add('bg-gray-300')
   })
-  el.classList.remove('bg-black')
-  el.classList.add('bg-red-600')
+  el.classList.remove('bg-gray-300')
+  el.classList.add('bg-black')
 }

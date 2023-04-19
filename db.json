@@ -28,52 +28,6 @@
           "inventory": 20
         },
         {
-          "id": 2,
-          "name": "Air Max 270",
-          "brand": "Nike",
-          "price": 170,
-          "description": "The Air Max 270 features the tallest Air unit ever, providing maximum cushioning for all-day comfort. The shoe also has a sleek design and a breathable upper for a modern look.",
-          "image_url": "../../../public/Products/nike/2.png",
-          "size": [
-            40,
-            41,
-            43
-          ],
-          "color": [
-            "lighGray",
-            "green",
-            "purple",
-            "brown",
-            "blue",
-            "red",
-            "black"
-          ],
-          "inventory": 20
-        },
-        {
-          "id": 6,
-          "name": "Air Jordan 1",
-          "brand": "Nike",
-          "price": 170,
-          "description": "The Jordan 1 is a legendary basketball shoe that has become a cultural icon. With its sleek design and comfortable construction, the shoe is perfect for both sports and casual wear.",
-          "image_url": "../../../public/Products/nike/6.png",
-          "size": [
-            40,
-            41,
-            43
-          ],
-          "color": [
-            "lighGray",
-            "green",
-            "purple",
-            "brown",
-            "blue",
-            "red",
-            "black"
-          ],
-          "inventory": 20
-        },
-        {
           "id": 37,
           "name": "Gel-Lyte III OG",
           "brand": "Asics",
@@ -120,7 +74,18 @@
           "inventory": 20
         }
       ],
-      "cart": [],
+      "cart": [
+        {
+          "id": 1681919113585,
+          "price": 200,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/10.png",
+          "name": "SB Dunk Low",
+          "size": "41",
+          "color": "purple",
+          "condition": "in delivery"
+        }
+      ],
       "address": [
         {
           "id": "1",
@@ -145,123 +110,103 @@
       ],
       "orders": [
         {
-          "id": 1681578806127,
+          "id": 1681904013871,
           "price": 260,
           "quantity": 2,
           "pic": "../../../public/Products/nike/1.png",
           "name": "Air Force 1",
-          "size": "42",
+          "size": "40",
           "color": "lighGray",
           "condition": "completed"
         },
         {
-          "id": 1681578842662,
-          "price": 720,
-          "quantity": 6,
-          "pic": "../../../public/Products/nike/4.png",
-          "name": "Blazer Mid '77 Vintage",
-          "size": "44",
-          "color": "blue",
-          "condition": "completed"
-        },
-        {
-          "id": 1681578987486,
-          "price": 180,
-          "quantity": 2,
-          "pic": "../../../public/Products/puma/2.png",
-          "name": "Cali",
-          "size": "43",
-          "color": "lighGray",
-          "condition": "in delivery"
-        },
-        {
-          "id": 1681579038322,
-          "price": 840,
-          "quantity": 6,
-          "pic": "../../../public/Products/puma/1.png",
-          "name": "RS-X",
-          "size": "43",
-          "color": "purple",
-          "condition": "in delivery"
-        },
-        {
-          "id": 1681579223199,
-          "price": 840,
-          "quantity": 6,
-          "pic": "../../../public/Products/puma/4.png",
-          "name": "Puma Ignite",
-          "size": "43",
-          "color": "green",
-          "condition": "in delivery"
-        },
-        {
-          "id": 1681740504667,
-          "price": 340,
-          "quantity": 2,
-          "pic": "../../../public/Products/nike/4.png",
-          "name": "Blazer Mid '77 Vintage",
-          "size": "43",
-          "color": "green",
-          "condition": "in delivery"
-        },
-        {
-          "id": 1681740732470,
-          "price": 320,
-          "quantity": 2,
-          "pic": "../../../public/Products/puma/8.png",
-          "name": "Cell Endura",
-          "size": "43",
-          "color": "brown",
-          "condition": "in delivery"
-        },
-        {
-          "id": 1681741254484,
-          "price": 340,
-          "quantity": 2,
-          "pic": "../../../public/Products/nike/6.png",
-          "name": "Air Jordan 1",
-          "size": "41",
-          "color": "purple",
-          "condition": "in delivery"
-        },
-        {
-          "id": 1681741478519,
-          "price": 220,
-          "quantity": 2,
-          "pic": "../../../public/Products/asics/7.png",
-          "name": "Gel-Lyte III OG",
-          "size": "41",
-          "color": "green",
-          "condition": "in delivery"
-        },
-        {
-          "id": 1681745005663,
-          "price": 65,
-          "quantity": 1,
-          "pic": "../../../public/Products/asics/5.png",
-          "name": "Gel-Contend 7",
-          "size": "43",
-          "color": "green",
-          "condition": "in delivery"
-        },
-        {
-          "id": 1681745884069,
-          "price": 340,
-          "quantity": 2,
-          "pic": "../../../public/Products/nike/2.png",
-          "name": "Air Max 270",
-          "size": "41",
-          "color": "purple",
-          "condition": "in delivery"
-        },
-        {
-          "id": 1681746912812,
+          "id": 1681904018495,
           "price": 170,
           "quantity": 1,
           "pic": "../../../public/Products/nike/2.png",
           "name": "Air Max 270",
           "size": "43",
-          "color": "black",
+          "color": "green",
+          "condition": "completed"
+        },
+        {
+          "id": 1681905004928,
+          "price": 340,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/2.png",
+          "name": "Air Max 270",
+          "size": "41",
+          "color": "green",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681905053036,
+          "price": 340,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/1.png",
+          "name": "Air Force 1",
+          "size": "41",
+          "color": "purple",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681905062149,
+          "price": 240,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/4.png",
+          "name": "Blazer Mid '77 Vintage",
+          "size": "43",
+          "color": "brown",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681905129940,
+          "price": 200,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/10.png",
+          "name": "SB Dunk Low",
+          "size": "43",
+          "color": "green",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681905985091,
+          "price": 260,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/1.png",
+          "name": "Air Force 1",
+          "size": "42",
+          "color": "green",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681906308766,
+          "price": 130,
+          "quantity": 2,
+          "pic": "../../../public/Products/converse/8.png",
+          "name": "Chuck Taylor All Star Leather Low Top",
+          "size": "43",
+          "color": "green",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681910259244,
+          "price": 340,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/2.png",
+          "name": "Air Max 270",
+          "size": "43",
+          "color": "purple",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681914835868,
+          "price": 260,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/1.png",
+          "name": "Air Force 1",
+          "size": "41",
+          "color": "green",
           "condition": "in delivery"
         }
       ]
@@ -388,13 +333,63 @@
       ],
       "orders": [
         {
-          "id": 1681325258642,
-          "price": 390,
-          "quantity": 3,
+          "id": 1681907920843,
+          "price": 260,
+          "quantity": 2,
           "pic": "../../../public/Products/nike/1.png",
           "name": "Air Force 1",
           "size": "41",
+          "color": "green",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681907934494,
+          "price": 240,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/4.png",
+          "name": "Blazer Mid '77 Vintage",
+          "size": "44",
           "color": "purple",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681907943720,
+          "price": 170,
+          "quantity": 1,
+          "pic": "../../../public/Products/nike/5.png",
+          "name": "Air Max 2090",
+          "size": "40",
+          "color": "blue",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681908019428,
+          "price": 360,
+          "quantity": 4,
+          "pic": "../../../public/Products/puma/3.png",
+          "name": "NRGY Neko",
+          "size": "41",
+          "color": "red",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681908180450,
+          "price": 340,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/2.png",
+          "name": "Air Max 270",
+          "size": "43",
+          "color": "green",
+          "condition": "in delivery"
+        },
+        {
+          "id": 1681908198742,
+          "price": 240,
+          "quantity": 2,
+          "pic": "../../../public/Products/nike/4.png",
+          "name": "Blazer Mid '77 Vintage",
+          "size": "43",
+          "color": "green",
           "condition": "in delivery"
         }
       ]
@@ -2042,512 +2037,6 @@
     }
   ],
   "mostPopular": [
-    {
-      "id": 68,
-      "name": "Chuck Taylor All Star Leather Low Top",
-      "brand": "Converse",
-      "price": 65,
-      "description": "The Chuck Taylor All Star Leather Low Top is a classic sneaker that has been updated with a premium leather upper.",
-      "image_url": "../../../public/Products/converse/8.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 69,
-      "name": "Chuck Taylor All Star Street Mid Top",
-      "brand": "Converse",
-      "price": 65,
-      "description": "The Chuck Taylor All Star Street Mid Top is a modern update to the classic Chuck Taylor design.",
-      "image_url": "../../../public/Products/converse/9.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 61,
-      "name": "Chuck Taylor All Star Low Top",
-      "brand": "Converse",
-      "price": 50,
-      "description": "The Chuck Taylor All Star Low Top is a classic canvas sneaker that has become an iconic piece of American culture.",
-      "image_url": "../../../public/Products/converse/1.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 62,
-      "name": "Chuck Taylor All Star High Top",
-      "brand": "Converse",
-      "price": 55,
-      "description": "The Chuck Taylor All Star High Top is a classic canvas sneaker that has become an iconic piece of American culture.",
-      "image_url": "../../../public/Products/converse/2.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 50,
-      "name": "Speed TR Flexweave",
-      "brand": "Reebok",
-      "price": 100,
-      "description": "The Speed TR Flexweave is a high-performance cross-training shoe designed to provide maximum support and stability.",
-      "image_url": "../../../public/Products/reebok/10.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 51,
-      "name": "Fresh Foam 1080v11",
-      "brand": "New Balance",
-      "price": 150,
-      "description": "The Fresh Foam 1080v11 is a high-performance running shoe designed for neutral runners.",
-      "image_url": "../../../public/Products/new balance/1.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 52,
-      "name": "Fresh Foam Hierro v6",
-      "brand": "New Balance",
-      "price": 135,
-      "description": "The Fresh Foam Hierro v6 is a high-performance trail running shoe designed to provide maximum support and stability.",
-      "image_url": "../../../public/Products/new balance/2.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 41,
-      "name": "Nano X1",
-      "brand": "Reebok",
-      "price": 130,
-      "description": "The Nano X1 is a high-performance cross-training shoe designed to provide maximum support and stability.",
-      "image_url": "../../../public/Products/reebok/1.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 42,
-      "name": "Classic Leather",
-      "brand": "Reebok",
-      "price": 75,
-      "description": "The Classic Leather is a retro sneaker that has become a fashion icon.",
-      "image_url": "../../../public/Products/reebok/2.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 43,
-      "name": "Club C 85",
-      "brand": "Reebok",
-      "price": 75,
-      "description": "The Club C 85 is a classic Reebok sneaker that has become a fashion icon.",
-      "image_url": "../../../public/Products/reebok/3.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 44,
-      "name": "Zig Kinetica",
-      "brand": "Reebok",
-      "price": 120,
-      "description": "The Zig Kinetica is a high-performance running shoe designed to provide maximum energy return.",
-      "image_url": "../../../public/Products/reebok/4.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 29,
-      "name": "Terrex Free Hiker",
-      "brand": "Adidas",
-      "price": 200,
-      "description": "The Terrex Free Hiker is a high-performance hiking shoe designed to provide maximum comfort and support on the trail.",
-      "image_url": "../../../public/Products/adidas/9.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 30,
-      "name": "Adilette Cloudfoam Plus",
-      "brand": "Adidas",
-      "price": 35,
-      "description": "The Adilette Cloudfoam Plus is a comfortable slide designed for post-workout recovery.",
-      "image_url": "../../../public/Products/adidas/10.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 31,
-      "name": "Gel-Kayano 28",
-      "brand": "Asics",
-      "price": 160,
-      "description": "The Gel-Kayano 28 is a high-performance running shoe designed for overpronators. It features Asics' signature Gel cushioning technology, a supportive upper, and a durable rubber outsole.",
-      "image_url": "../../../public/Products/asics/1.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 17,
-      "name": "Clyde Court",
-      "brand": "Puma",
-      "price": 150,
-      "description": "A retro basketball shoe with a low profile and sleek design, originally worn by NBA legend Walt 'Clyde' Frazier.",
-      "image_url": "../../../public/Products/puma/7.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 18,
-      "name": "Cell Endura",
-      "brand": "Puma",
-      "price": 160,
-      "description": "A running shoe with cushioning technology designed to reduce impact and improve stability, available in a range of styles.",
-      "image_url": "../../../public/Products/puma/8.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 19,
-      "name": "Hybrid Rocket",
-      "brand": "Puma",
-      "price": 130,
-      "description": "A running shoe with a responsive cushioning system and a unique, futuristic design.",
-      "image_url": "../../../public/Products/puma/9.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 20,
-      "name": "Enzo",
-      "brand": "Puma",
-      "price": 90,
-      "description": "A versatile training shoe with a modern design and comfortable fit.",
-      "image_url": "../../../public/Products/puma/10.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 7,
-      "name": "Free RN Flyknit 3.0",
-      "brand": "Nike",
-      "price": 150,
-      "description": "The Air Max 90 is another classic running shoe that has been updated with modern materials and construction. It features a comfortable, cushioned sole and a sleek, minimalist design.",
-      "image_url": "../../../public/Products/nike/7.png",
-      "size": [
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 8,
-      "name": "Air Max 97",
-      "brand": "Nike",
-      "price": 190,
-      "description": "The Air Max 97 is a classic running shoe that features a full-length Air unit for maximum cushioning. It has a sleek design and a reflective upper for a bold, futuristic look.",
-      "image_url": "../../../public/Products/nike/8.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 9,
-      "name": "Zoom Fly 3",
-      "brand": "Nike",
-      "price": 180,
-      "description": "The Zoom Fly 3 is a classic running shoe that has become a fashion icon. With its timeless design and comfortable construction, the shoe is perfect for casual wear.",
-      "image_url": "../../../public/Products/nike/9.png",
-      "size": [
-        40,
-        44
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    },
-    {
-      "id": 10,
-      "name": "SB Dunk Low",
-      "brand": "Nike",
-      "price": 100,
-      "description": "The Dunk Low is a classic basketball shoe that has been updated with modern materials and construction. It features a comfortable, cushioned sole and a sleek, minimalist design.",
-      "image_url": "../../../public/Products/nike/10.png",
-      "size": [
-        40,
-        41,
-        43
-      ],
-      "color": [
-        "lighGray",
-        "green",
-        "purple",
-        "brown",
-        "blue",
-        "red",
-        "black"
-      ],
-      "inventory": 20
-    }
-  ],
-  "myWishList": [
     {
       "id": 68,
       "name": "Chuck Taylor All Star Leather Low Top",

@@ -3,7 +3,7 @@ import El from '@/Library'
 export const Notfound = props => {
   return El({
     element: 'div',
-    className: `text-2xl w-full absolute left-0 top-[510px] flex flex-col text-center items-center justify-center font-Inter ${props.top}`,
+    className: `text-2xl w-full absolute left-0 flex flex-col text-center items-center justify-center font-Inter ${props.top}`,
     child: [
       El({
         element: 'img',

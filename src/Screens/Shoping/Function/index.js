@@ -143,7 +143,9 @@ function addDataToCart() {
     color: localStorage.getItem('color'),
     size: localStorage.getItem('size'),
     quantity: JSON.parse(localStorage.getItem('qty_price')).quantity || 1,
-    price: JSON.parse(localStorage.getItem('qty_price')).price || JSON.parse(localStorage.getItem('selectedItem')).price,
+    price:
+      JSON.parse(localStorage.getItem('qty_price')).price ||
+      JSON.parse(localStorage.getItem('selectedItem')).price,
     name: JSON.parse(localStorage.getItem('selectedItem')).name,
     pic: JSON.parse(localStorage.getItem('selectedItem')).image_url,
   }
@@ -380,12 +382,13 @@ export function handleCheckout() {
     const activeAccount = res.data.find(
       item => item.id === JSON.parse(localStorage.getItem('login')).id
     )
-    FinalUpdateCart(activeAccount, cart).then(res =>
+    FinalUpdateCart(activeAccount, cart).then(res => {
       orderCart(res.data.cart, orderListBox, {
         quantityAction: 'hidden',
         trash: 'hidden',
       })
-    )
+      localStorage.setItem('checkout',JSON.stringify(res.data.cart))
+    })
     const defoultAddress = [JSON.parse(localStorage.getItem('selectedAddress'))]
     addressCart(defoultAddress, addressBox, {
       radioClass: 'hidden',

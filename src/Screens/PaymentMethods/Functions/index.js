@@ -1,4 +1,4 @@
-import { FinalUpdateCart, GetData } from '@/API'
+import { FinalUpdateCart, GetData, PutDataOrder, deleteDataCart } from '@/API'
 import { EmptyOrder } from '@/Components/EmptyOrder'
 import { deactiveAllFooters } from '@/Components/FooterMenu/Function'
 import { ViewOrdersCart } from '@/Components/ViewOrdersCart'
@@ -27,13 +27,12 @@ export function handleConfirmefPayment() {
     const activeAccount = res.data.find(
       item => item.id === JSON.parse(localStorage.getItem('login')).id
     )
-    activeAccount.cart.map(item => {
-      FinalUpdateCart(activeAccount, [], item).then(res =>
-        console.log(res.data)
-      )
-    })
+    const orders = JSON.parse(localStorage.getItem('checkout'))
+    console.log(orders)
+    PutDataOrder(activeAccount, [], orders)
   })
   localStorage.removeItem('promo')
+  localStorage.removeItem('selectedShipping')
 }
 // ......................................................................
 export function handleGoToHomePage() {

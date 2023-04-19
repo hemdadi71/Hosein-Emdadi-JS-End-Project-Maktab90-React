@@ -54,7 +54,7 @@ export const addressCart = (data, elem, { editClass, radioClass }) => {
             El({
               element: 'p',
               className:
-                'w-[50%] truncate text-overflow-ellipsis text-[14px] text-gray-500',
+                'w-[245px] truncate text-overflow-ellipsis text-[14px] text-gray-500',
               child: `${item.address}`,
             }),
           ],

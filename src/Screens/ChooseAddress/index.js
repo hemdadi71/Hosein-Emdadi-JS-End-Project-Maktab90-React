@@ -1,6 +1,10 @@
 import El from '@/Library'
 import { svgs } from '@/svgs'
 import { handleBackToCheckoutPage } from '../Checkout/Functions'
+import {
+  handleAddNewAddress,
+  handleSubmitAddress,
+} from './functions'
 
 export const choosedAddress = () => {
   return El({
@@ -13,7 +17,7 @@ export const choosedAddress = () => {
         child: [
           El({
             element: 'div',
-            className: 'flex items-center gap-2',
+            className: 'flex items-center gap-4',
             child: [
               El({
                 element: 'div',
@@ -31,42 +35,114 @@ export const choosedAddress = () => {
       }),
       El({
         element: 'div',
-        className: 'mt-5',
+        className: 'w-full h-full overflow-y-auto no-scrollbar pb-[300px]',
         child: [
           El({
             element: 'div',
-            id: 'adressListBox',
-            className: 'flex flex-col gap-6',
-          }),
-        ],
-      }),
-      El({
-        element: 'div',
-        className: 'w-full mt-6',
-        child: [
-          El({
-            element: 'button',
-            className:
-              'w-full flex items-center justify-center bg-[#E7E7E7] py-4 font-Inter text-gray-600 rounded-full font-bold',
-            child: 'Add New Address',
-          }),
-        ],
-      }),
-      El({
-        element: 'div',
-        className:
-          'bg-[#fff] border-t rounded-t-[28px] px-5 py-7 w-full fixed bottom-0 left-0',
-        child: [
-          El({
-            element: 'button',
-            onclick: () => handleBackToCheckoutPage('choosen'),
-            className:
-              'gap-3 bg-[#0F0F0F] w-full py-3 text-white rounded-full shadow-lg shadow-gray-400 flex items-center justify-center',
+            className: 'mt-5',
             child: [
               El({
-                element: 'p',
-                className: 'font-bold font-Inter',
-                child: 'Apply',
+                element: 'div',
+                id: 'adressListBox',
+                className: 'flex flex-col gap-6',
+              }),
+            ],
+          }),
+          El({
+            element: 'div',
+            className: 'w-full mt-6',
+            child: [
+              El({
+                element: 'button',
+                onclick: handleAddNewAddress,
+                className:
+                  'w-full flex items-center justify-center bg-[#E7E7E7] py-4 font-Inter text-gray-600 rounded-full font-bold',
+                child: 'Add New Address',
+              }),
+            ],
+          }),
+          El({
+            element: 'div',
+            id: 'addAddressBox',
+            className:
+              'w-full mt-6 h-0 overflow-y-hidden transition-all ease-in-out duration-500',
+            child: [
+              El({
+                element: 'div',
+                className: 'w-full px-5 py-6 bg-white rounded-[24px]',
+                child: [
+                  El({
+                    element: 'form',
+                    onsubmit: handleSubmitAddress,
+                    className: 'flex flex-col gap-8',
+                    id: 'form',
+                    child: [
+                      El({
+                        element: 'div',
+                        id: 'nameBox',
+                        className: 'flex flex-col gap-2 relative',
+                        child: [
+                          El({
+                            element: 'label',
+                            className: 'font-bold',
+                            child: 'Address Title:',
+                          }),
+                          El({
+                            element: 'input',
+                            type: 'text',
+                            className:
+                              'bg-[#F5F5F5] outline-none rounded-md px-4 py-1',
+                            name: 'title',
+                          }),
+                        ],
+                      }),
+                      El({
+                        element: 'div',
+                        id:'desBox',
+                        className: 'flex flex-col gap-2 relative',
+                        child: [
+                          El({
+                            element: 'label',
+                            className: 'font-bold',
+                            child: 'Complete Address:',
+                          }),
+                          El({
+                            element: 'textarea',
+                            className:
+                              'bg-[#F5F5F5] outline-none rounded-md px-4 py-1 h-[100px]',
+                            name: 'description',
+                          }),
+                        ],
+                      }),
+                      El({
+                        element: 'input',
+                        type: 'submit',
+                        value: 'Add Address',
+                        className: 'px-5 py-3 rounded-full bg-[#F5F5F5]',
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+          El({
+            element: 'div',
+            className:
+              'bg-[#fff] border-t rounded-t-[28px] px-5 py-7 w-full fixed bottom-0 left-0',
+            child: [
+              El({
+                element: 'button',
+                onclick: () => handleBackToCheckoutPage('choosen'),
+                className:
+                  'gap-3 bg-[#0F0F0F] w-full py-3 text-white rounded-full shadow-lg shadow-gray-400 flex items-center justify-center',
+                child: [
+                  El({
+                    element: 'p',
+                    className: 'font-bold font-Inter',
+                    child: 'Apply',
+                  }),
+                ],
               }),
             ],
           }),

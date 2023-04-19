@@ -50,7 +50,7 @@ export const CartPage = () => {
               El({
                 element: 'div',
                 id: 'cartBox',
-                className: 'flex flex-col gap-6 px-4',
+                className: 'flex flex-col gap-6 px-4 pb-20',
               }),
               El({
                 element: 'div',

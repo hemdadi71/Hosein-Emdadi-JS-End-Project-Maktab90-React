@@ -60,6 +60,8 @@ export function handleSelectedProduct(e) {
     history.pushState(null, null, '/home/most%20popular/shoping')
   } else if (location.pathname === '/home') {
     history.pushState(null, null, '/home/shoping')
+  } else if (location.pathname === '/home/wishlist/search') {
+    history.pushState(null, null, '/home/wishlist/search/shoping')
   } else if (location.pathname === brand.brandPath) {
     history.pushState(null, null, `${brand.brandPath}/shoping`)
   }

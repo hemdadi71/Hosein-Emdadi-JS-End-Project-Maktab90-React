@@ -11,7 +11,6 @@ import { InputFocusOut } from '@/Screens/SearchPage/Functions'
 
 export const FilterWishList = e => {
   addLoading()
-  const text = e.currentTarget.innerHTML
   activeItem(e)
   if (e.currentTarget.innerHTML === 'All') {
     renderWishList()
@@ -19,6 +18,7 @@ export const FilterWishList = e => {
   } else {
     const WishListProducts = document.getElementById('WishListProducts')
     const activeAccount = JSON.parse(localStorage.getItem('login'))
+    const text = e.currentTarget.innerHTML
     GetData('account').then(res => {
       const currentAccount = res.data.find(item => item.id === activeAccount.id)
       const filteredItems = currentAccount.wishList.filter(

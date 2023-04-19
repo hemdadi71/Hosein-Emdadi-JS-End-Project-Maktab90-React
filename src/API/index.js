@@ -72,7 +72,7 @@ export async function deleteDataCart(activeAccount, item) {
   return response
 }
 // .........................................................................
-export async function FinalUpdateCart(activeAccount, item, orderItem) {
+export async function FinalUpdateCart(activeAccount, item) {
   const response = await axios.put(
     `http://localhost:3000/account/${activeAccount.id}`,
     {
@@ -82,12 +82,43 @@ export async function FinalUpdateCart(activeAccount, item, orderItem) {
       wishList: activeAccount.wishList,
       cart: item,
       address: activeAccount.address,
-      orders: orderItem
-        ? [...activeAccount.orders, orderItem]
-        : activeAccount.orders,
+      orders: activeAccount.orders,
       condition: activeAccount.condition,
     }
   )
   return response
 }
 // ..........................................................................
+export async function PutDataOrder(activeAccount, cartItem, item) {
+  const response = await axios.put(
+    `http://localhost:3000/account/${activeAccount.id}`,
+    {
+      id: activeAccount.id,
+      email: activeAccount.email,
+      password: activeAccount.password,
+      wishList: activeAccount.wishList,
+      cart: cartItem,
+      address: activeAccount.address,
+      orders: [...activeAccount.orders, ...item],
+      condition: activeAccount.condition,
+    }
+  )
+  return response
+}
+// .................................................................
+export async function PutAddressData(activeAccount, item) {
+  const response = await axios.put(
+    `http://localhost:3000/account/${activeAccount.id}`,
+    {
+      id: activeAccount.id,
+      email: activeAccount.email,
+      password: activeAccount.password,
+      wishList: activeAccount.wishList,
+      cart: activeAccount.cart,
+      address: [...activeAccount.address, item],
+      orders: activeAccount.orders,
+      condition: activeAccount.condition,
+    }
+  )
+  return response
+}
