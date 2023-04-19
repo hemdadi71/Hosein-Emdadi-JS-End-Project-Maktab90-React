@@ -124,9 +124,15 @@ export const choosedAddress = () => {
                     ],
                   }),
                   El({
-                    element: 'i',
+                    element: 'div',
+                    className: 'absolute top-2 right-5 px-[6px] py-[2px] rounded-full border-2 border-gray-400',
                     onclick: handleCloseAddAddress,
-                    className: 'bi bi-x-lg absolute top-2 right-5',
+                    child: [
+                      El({
+                        element: 'i',
+                        className: 'bi bi-x-lg',
+                      }),
+                    ],
                   }),
                 ],
               }),
